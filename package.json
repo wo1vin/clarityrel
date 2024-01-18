@@ -2,7 +2,7 @@
   "name": "clarityrel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,29 +11,29 @@
     "url": "git+ssh://git@github.com/wo1vin/clarityrel.git"
   },
   "keywords": [
-    "Dating",
-    "marriage",
-    "long-term",
-    "relationships",
-    "relationships",
-    "long",
-    "term",
-    "relationships",
-    "Christian",
     "dating",
+    "marriage",
+    "long-term relationships",
+    "relationships",
+    "Christian dating",
     "love",
-    "soul",
-    "mate",
+    "soulmate",
     "partner",
     "spouse",
     "romance",
-    "intentional",
-    "dating."
+    "intentional dating"
   ],
   "author": "Denisse Del Monte",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wo1vin/clarityrel/issues"
   },
-  "homepage": "https://github.com/wo1vin/clarityrel#readme"
+  "homepage": "https://github.com/wo1vin/clarityrel#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "logger": "^0.0.1"
+  }
 }
