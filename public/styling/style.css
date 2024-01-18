@@ -1,0 +1,79 @@
+/*
+TEXT
+BODY
+HEADER
+MAIN
+FOOTER
+*/
+
+/* TEXT */
+h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    color: rgb(196, 153, 110);
+}
+h3{
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgb(119, 119, 119);
+    margin-bottom: 0;
+}
+p{
+    color: rgb(100, 100, 100);
+    font-family: 'Comfortaa', sans-serif;
+}
+a{
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    color: rgb(196, 153, 110);
+}
+
+/* BODY */
+body{
+    margin: 0;
+    background-color: rgb(240, 238, 226);
+}
+
+/* HEADER */
+nav{
+    padding: 1rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo{
+    width: 10rem;
+}
+ul{
+    height: min-content;
+    list-style: none;
+    display: inline-flex;
+}
+li, a{
+    padding: .5rem;
+    border-radius: 1rem;
+}
+li:hover, a:hover{
+    background-color: rgb(255, 241, 223);
+}
+
+/* MAIN */
+#intro{
+   display: flex;
+   justify-content: center;
+}
+.intro-img{
+    margin-right: -2rem;
+}
+.photo{
+    margin-top: -6rem;
+    width: 30rem;
+}
+.half{
+    width: 40%;
+    padding-top: 2rem;
+}

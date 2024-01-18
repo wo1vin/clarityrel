@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarity Relationships</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="checkout.js" defer></script>
+    <link href="styling/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>hello</h1>
+    <header>
+        <nav>
+            <img id="logo" src="styling/logo.svg" />
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">Services</a></li>
+                <li><a href="#about">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <div class="intro-img">
+                <img class="photo" src="styling/intro-img.png">
+            </div>
+            <section class="half">
+                <h3>Life is a journey</h3>
+                <h1>Find your partner in life</h1>
+                <p>Arpri shares his experiences as a male professional with an extensive dating history. He aims to provide participants with a real life perspective from a male’s point of view. He evolved from a bachelor to an intentional loving and collaborative husband.</p>
+                <p>Rachel shares her experiences as a single woman turned adoring wife who has worked to balance her professional and life/romantic goals. She also brings her broad knowledge from the field of psychology. She is a licensed mental health clinician and runs her own practice and is licensed in three states.</p>
+            </section>
+        </section>
+    </main>
+    <!-- Display a payment form -->
+    <div id="checkout">
+        <!-- Checkout will insert the payment form here -->
+    </div>
 </body>
 </html>
