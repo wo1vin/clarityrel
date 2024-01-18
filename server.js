@@ -1,15 +1,19 @@
 const express = require('express');
 const app = express();
+const path = require('path')
 
 require('dotenv').config({path: './config/.env'});
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')))
 
 //body parsing-may not need
 app.use(express.json());
 
-app.use(logger("dev"));
+app.get('/', (req,res)=>{ 
+    res.render('index')
+})
 
 //Server Running
 app.listen(process.env.PORT, () => {
