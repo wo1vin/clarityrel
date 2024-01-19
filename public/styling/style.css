@@ -7,7 +7,7 @@ FOOTER
 */
 
 /* TEXT */
-h1{
+h1,h4{
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -22,6 +22,11 @@ h3{
     color: rgb(119, 119, 119);
     margin-bottom: 0;
 }
+h4{
+    color: rgb(100, 100, 100);
+    font-size: 1rem;
+    font-weight: 600;
+}
 p{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
@@ -31,11 +36,26 @@ a{
     text-decoration: none;
     color: rgb(196, 153, 110);
 }
+/* BUTTON */
+a.button:hover{
+    background-color: rgb(17, 44, 75);
+    border: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    color:  rgb(243, 204, 131);
+    text-transform: uppercase;
+    padding: .75rem 1rem;
+    border-radius: 1.5rem;
+}
+.button, li a:hover{
+    border: 1px solid rgb(165, 118, 42);
+}
 
 /* BODY */
 body{
     margin: 0;
-    background-color: rgb(240, 238, 226);
+    background-color: rgb(242, 240, 229);
 }
 
 /* HEADER */
@@ -57,17 +77,22 @@ li, a{
     padding: .5rem;
     border-radius: 1rem;
 }
-li:hover, a:hover{
+/* li:hover, a:hover{
     background-color: rgb(255, 241, 223);
-}
+} */
 
 /* MAIN */
-#intro{
+#intro, #offerings, .mission{
    display: flex;
    justify-content: center;
 }
-.intro-img{
+#intro{
+    margin-bottom: -4rem;
+}
+.intro-img,.mission-img{
     margin-right: -2rem;
+    position: relative;
+    z-index: -1;
 }
 .photo{
     margin-top: -6rem;
@@ -76,4 +101,59 @@ li:hover, a:hover{
 .half{
     width: 40%;
     padding-top: 2rem;
+}
+.half p{
+    margin: 0 0 1.25rem 0;
+}
+
+/* MISSION */
+.mission{
+    margin: 3rem 0 -3rem 0;
+}
+.mission-img{
+    width: 30rem;
+    margin-left: -3rem;
+}
+
+/* OFFERINGS */
+#offerings>div{
+    width: max-content;
+    margin-right: 3rem;
+}
+.product{
+    padding: 0 0 1rem 0;
+}
+.product > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product div div{
+    width: 4rem;
+    height: inherit;
+    border-bottom: 1px solid rgb(100, 100, 100);;
+}
+.product p{
+    margin: 0;
+}
+.product>p{
+    margin-top: .5rem;
+    font-size: .8rem;
+}
+p.half{
+    margin-top: 3rem;
+}
+p.half span{
+    display: block;
+    margin-bottom: 1rem;
+}
+#about{
+    
+    margin: 6rem;
+}
+.row{
+    display: flex;
+}
+.about-img{
+    width: 30rem;
 }
