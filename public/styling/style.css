@@ -20,7 +20,7 @@ h2, #offerings h1,.product h4{
     color: rgb(243, 204, 131);
 }
 .product p,#offerings>p{
-    color:rgb(206, 176, 117);;
+    color:rgb(206, 176, 117);
 }
 h3{
     font-family: 'Rubik', sans-serif;
@@ -39,16 +39,50 @@ p{
     font-family: 'Comfortaa', sans-serif;
 }
 a{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
     color: rgb(196, 153, 110);
+    transition: all .2s;
 }
 /* BUTTON */
+.button-42{
+  background-color:  #01342e;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
+  color:rgb(229, 189, 109);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Comfortaa', sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 8rem;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover,li a:hover {
+  box-shadow: rgb(229, 189, 109) 0 3px 8px;
+}
+li a:hover {
+    background-color: rgb(3, 64, 66);
+    color: rgb(227, 203, 129)
+}
 a.button:hover,#submit:hover,
 #submit:active{
-    background-color: rgb(17, 44, 75);
+    background-color: rgb(7, 44, 40);
     border: none;
-    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-style: italic;
     color:  rgb(243, 204, 131);
@@ -59,11 +93,7 @@ a.button:hover,#submit:hover,
 .button, li a:hover{
     border: 1px solid rgb(165, 118, 42);
 }
-#offerings .button{
-    color: rgb(243, 204, 131);
-    border: 1px solid rgb(243, 204, 131);
-    /* margin: 2rem 0; */
-}
+
 /* BODY */
 body{
     margin: 0;
