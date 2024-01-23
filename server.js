@@ -46,6 +46,8 @@ app.post('/create-checkout-session', async (req,res) => {
     }
 })
 
+// timestamp 19mins
+
 app.use(
     cors({
       origin: "http://localhost:3000",
