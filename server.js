@@ -15,9 +15,11 @@ app.use(express.json());
 
 // create the items that can be purchased
 const storeItems = new Map([
+  [1, { priceInCents: 0, name: "TEST 01" }],
   [1, { priceInCents: 14900, name: "Masterclass" }],
-  [2, { priceInCents: 29900, name: "Private Session" }]
+//   [2, { priceInCents: 29900, name: "Private Session" }]
 ])
+
 // create checkout session
 app.post('/create-checkout-session', async (req,res) => {
     try {
@@ -38,7 +40,7 @@ app.post('/create-checkout-session', async (req,res) => {
                 }
             }),
             success_url: `${process.env.SERVER_URL}/success.html`,
-            cancel_url: `${process.env.SERVER_URL}/cancel.html` 
+            cancel_url: `${process.env.SERVER_URL}/#offerings` 
         })
         res.json({ url: session.url })
     } catch (e) {

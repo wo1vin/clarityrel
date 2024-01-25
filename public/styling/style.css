@@ -1,4 +1,5 @@
 /*
+VARS
 TEXT
 BODY
 HEADER
@@ -7,6 +8,18 @@ CONTACT
 FOOTER
 */
 
+/* VARS */
+:root{
+    --darkgreen: rgb(12, 49, 48);
+    --green: rgb(21, 82, 80);
+    --darkbluegreen: #0a2a2e;
+    --darkblue: #092134;
+    --darkgold: #b28e5c;
+    --khaki: #f6cb8b;
+    --lightkhaki: #D2C2B2;
+    --lilac: #f8f6f0;
+    --grey: rgb(119, 119, 119);
+}
 /* TEXT */
 h1,h2,h4{
     font-family: 'Cormorant Garamond', serif;
@@ -14,13 +27,13 @@ h1,h2,h4{
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
-    color:rgb(196, 153, 110);;
+    color: var(--darkgold);
 }
 h2, #offerings h1,.product h4{
-    color: rgb(243, 204, 131);
+    color: var(--khaki);
 }
 .product p,#offerings>p{
-    color:rgb(206, 176, 117);
+    color: var(--khaki);
 }
 h3{
     font-family: 'Rubik', sans-serif;
@@ -38,26 +51,28 @@ p{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
 }
+li>a{
+    color: var(--grey);
+}
 a{
     font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
-    color: rgb(196, 153, 110);
+    color: var(--lilac);
     transition: all .2s;
 }
 /* BUTTON */
 .button-42{
-  background-color:  #01342e;
-  border-radius: 1rem;
+  margin: .5rem 0 0 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
-  color:rgb(229, 189, 109);
   cursor: pointer;
   display: inline-block;
   font-family: 'Comfortaa', sans-serif;
-  height: 40px;
-  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: .06rem;
+  padding: .75rem;
+  border-radius: 1rem;
   outline: 0;
   overflow: hidden;
-  padding: 0 20px;
   pointer-events: auto;
   position: relative;
   text-align: center;
@@ -66,38 +81,37 @@ a{
   -webkit-user-select: none;
   vertical-align: top;
   white-space: nowrap;
-  width: 8rem;
   z-index: 9;
   border: 0;
   transition: box-shadow .2s;
 }
-
+#intro .button-42{
+    color: var(--khaki);
+    background-color:  var(--darkgreen);
+}
+#offerings .button-42{
+    color: var(--khaki);
+    background-color: var(--green);
+    z-index: 0;
+}
 .button-42:hover,li a:hover {
-  box-shadow: rgb(229, 189, 109) 0 3px 8px;
+  box-shadow: rgb(1, 28, 21) 0 3px 8px;
 }
 li a:hover {
     background-color: rgb(3, 64, 66);
-    color: rgb(227, 203, 129)
+    color: var(--khaki);
 }
 a.button:hover,#submit:hover,
-#submit:active{
-    background-color: rgb(7, 44, 40);
-    border: none;
-    font-weight: 700;
-    font-style: italic;
-    color:  rgb(243, 204, 131);
-    text-transform: uppercase;
-    padding: .75rem 1rem;
-    border-radius: 1.5rem;
-}
-.button, li a:hover{
-    border: 1px solid rgb(165, 118, 42);
+#submit:active ,#offerings .button-42:hover, footer a:hover{
+    border: 1px solid ;
+    background-color: var(--darkbluegreen);
+    color: var(--khaki);
 }
 
 /* BODY */
 body{
     margin: 0;
-    background-color: rgb(242, 240, 229);
+    background-color: var(--lilac);
 }
 
 /* HEADER */
@@ -124,6 +138,9 @@ li, a{
 } */
 
 /* MAIN */
+body>section{
+    margin: 2rem 0;
+}
 #intro, #offerings, .mission{
    display: flex;
    justify-content: center;
@@ -203,7 +220,8 @@ li, a{
 
 /* OFFERINGS */
 #offerings{
-    background-color:rgb(21, 82, 80);
+    background-color: var(--darkgreen);
+    background: linear-gradient(0deg, rgba(2,20,22,1) 0%,rgba(12,49,48,1) 10%, rgba(10,42,46,1) 90%, rgba(2,20,22,1) 100%);
     padding: 2rem 0 4rem 0;
 }
 #offerings>div{
@@ -229,9 +247,14 @@ li, a{
 .product>p{
     margin-top: .5rem;
     font-size: .8rem;
+    margin-left: .5rem;
 }
 p.half{
     margin-top: 3rem;
+}
+#offerings>p{
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
 }
 p.half span{
     display: block;
@@ -261,7 +284,11 @@ p.half span{
     font-size: .75rem;
     padding: .75rem;
 }
-
+.price{
+    background-color: var(--green);
+    padding: .5rem .75rem;
+    border-radius: 1rem;
+}
 
 /* CONTACT */
 .contact-container,footer {
@@ -366,26 +393,21 @@ textarea::placeholder {
 }
 
 
-#submit {
-    font-family: 'Comfortaa', sans-serif;
+#submit{
     align-self: center;
     background-color: rgb(21, 82, 80); 
-    border: 1px solid ;
+    border: none;
     border-radius: 1rem;
     color: rgb(243, 204, 131);
     height: 3.5rem;
     justify-self: flex-end;
-    padding: 0 2rem;
+    padding: 0 1rem;
     font-size: 1.2rem;
     text-decoration: none;
     width: fit-content;
+    font-family: 'Comfortaa', sans-serif;
 }
 
-
-#submit:hover,
-#submit:active {
-    border: 1px solid ;
-}
 
 
 @media screen and (max-width: 650px) {
