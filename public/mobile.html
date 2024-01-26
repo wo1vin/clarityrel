@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Relationships</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- <script src="checkout.js" defer></script> -->
+    <script src="main.js" type="text/javascript" defer ></script>
+
+    <link href="styling/reset.css" rel="stylesheet" type="text/css">
+    <link href="styling/style-m.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul id="navLinks">
+            <li class="link1"><a href="#about">About Us</a></li>
+            <li class="link2"><a href="#offerings">Services</a></li>
+            <li class="link3"><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        
+    </nav>
+    <header>
+        <img id="logo" src="styling/logo.svg" />
+    </header>
+
+    <section id="intro">
+        <!-- <section class="half"> -->
+            <h3>Life is a journey</h3>
+            <h1>Find your partner in life</h1>
+            <p>Arpri shares his experiences as a male professional with an extensive dating history. He aims to provide participants with a real life perspective from a male’s point of view. He evolved from a bachelor to an intentional loving and collaborative husband.</p>
+            <p>Rachel shares her experiences as a single woman turned adoring wife who has worked to balance her professional and life/romantic goals. She also brings her broad knowledge from the field of psychology. She is a licensed mental health clinician and runs her own practice and is licensed in three states.</p>
+            <!-- <div class="intro-img"> -->
+                <img class="photo" src="styling/intro-img.png">
+            <!-- </div> -->
+            <div class="signUp">
+                <a href="#offerings" class="button-42">Sign up</a>
+                <p>Sign up to receive our free assessment tool</p>
+            </div>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <!-- <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTluTDlb-Bm0OcUtNxDJ46Pv9A_ch9ab8v0XdK2vyBEKq2XQ/viewform?embedded=true" width="640" height="1431" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div> -->
+            </div>
+        <!-- </section> -->
+    </section>
+
+    <section class="mission">
+        <section class="half">
+            <h3>CREATE A SUCCESSFUL dating strategy</h3>
+            <h1>build your dream relationship</h1>
+            <p>Our mission is to aid intentional singles identify potential obstacles, enabling them to foster intentional, long-term relationships that ultimately lead to marriage.</p>
+            <p>We aim to share our experiences and expertise in order to illustrate how realistic and reachable healthy loving relationships are–even amid today's challenging dating climate.</p>
+        </section> 
+        <!-- <div class="mission-img"> -->
+        <img class="photo" src="styling/engaged.png">
+        <!-- </div> -->
+    </section>
+
+    <section id="offerings">
+        <!-- <div class="half"> -->
+            <h1>Offerings</h1>
+            <section class="product">
+                <div class="price">
+                    <h4>Master Class</h4>
+                    <!-- <div></div> -->
+                    <p >$149</p>
+                </div>
+                <p>Intentional Dating Essentials</p>
+                <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
+                <div class="priceBtn"> 
+                    <button id="myBtn" class="button-42" role="button">Register</button>
+                    <button id="checkout" class="button-42" role="button">Submit Payment</button>
+                </div>
+            </section>
+            <section class="product">
+                <div  class="price">
+                    <h4>Private Session</h4>
+                    <p>$299</p>
+                </div>
+                <p>45-minute private session with both Pre & Rachel</p>
+                <p>Send us a message through our<a href="#contact"> contact form </a>to book!</p>
+            </section>
+            <section class="product">
+                <div class="price">
+                    <h4>Group Sessions</h4>
+                    <p>coming soon</p>
+                </div>
+                <!-- <p>Coming soon</p> -->
+            </section>
+        <!-- </div> -->
+        <p class="half">
+            <span>Disclaimer:</span>
+**Please note services rendered are practical in application. While much of the content is informed by therapeutic knowledge, services rendered through Clarity Relationships is not therapy. Referrals to other providers will be provided to participants needing support with their emotional health needs.
+        </p>
+    </section>
+</body>
