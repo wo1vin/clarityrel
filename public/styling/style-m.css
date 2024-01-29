@@ -18,7 +18,7 @@ body{
 /* TEXT */
 h1,h2,h4{
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
@@ -45,9 +45,6 @@ h4{
 p{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
-}
-li>a{
-    color: var(--grey);
 }
 a{
     font-family: 'Comfortaa', sans-serif;
@@ -76,22 +73,27 @@ nav {
   margin: 0;
 }
 #navLinks li{
+    width: 30vw;
+    background-color: #0a2a2ea3;
     padding: 0;
     text-align: center;
     position: absolute;
     right: 0px;
+    z-index: 0;
+    border-radius: 0;
 }
 .link1{
-    top: 48px;
+    top: 47px;
 }
 .link2{
-    top: 96px;
+    top: 94px;
 }
 .link3{
-    top: 144px;
+    top: 141px;
 }
 /* Style navigation menu links */
 nav a {
+    
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -105,8 +107,8 @@ nav a.icon {
   
   /* Add a grey background color on mouse-over */
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #0a2a2ea3;
+    color: var(--lilac);
   }
   
   /* Style the active link (or home/logo) */
@@ -119,7 +121,6 @@ header, .signUp{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: -2rem 0 2rem 0;
 }
 #logo {
     width: 10rem;
@@ -135,28 +136,76 @@ li {
 
 
 /* INTRO */
-#intro, .mission, #offerings{
-    padding: 0 1rem;
+#intro, .mission, #offerings,#about{
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 .photo{
     width: 100%;
-    margin: -5rem 0 -5rem -.75rem;
+    margin: -5rem 0 -7rem -.75rem;
     position: relative;
-    left: 4%;
+    left: 5%;
+    z-index: -1;
 }
 #intro p{
     margin: 0 0 .5rem 0;
 }
 .signUp{
     width: 100%;
-    margin: 1rem 0;
+    margin: 2rem 0 0 0;
 }
 .signUp p{
     text-align: center;
 }
+
+
+/* MODAL */
+/* MODAL */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Body */
+
+  /* Modal Content/Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: min-content; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .mission{
     margin-bottom: 4rem;
 }
@@ -213,7 +262,7 @@ li {
 #offerings{
     background-color: var(--darkgreen);
     background: linear-gradient(0deg, rgba(2,20,22,1) 0%,rgba(12,49,48,1) 10%, rgba(10,42,46,1) 90%, rgba(2,20,22,1) 100%);
-    padding: 2.5rem 1rem;
+    /* padding: 2.5rem 1rem; */
 }
 #offerings h1{
     margin: 2rem 0 1rem 0;
@@ -242,9 +291,6 @@ div.priceBtn{
 #offerings > p a{
     margin: 0 .5rem;
 }
-#about {
-    padding: 3rem 1rem;
-}
 .wed{
     margin: 1rem 0 -6rem 0;
 }
@@ -259,31 +305,27 @@ div.priceBtn{
 
 /* CONTACT */
 .contact-container,footer {
-    padding: 3rem 1rem;
-    align-items: center;
+    padding: 3rem 2rem;
     background: rgb(12, 49, 48);
     color: rgb(243, 204, 131);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-bottom: 4rem;
+    align-items: center;
     width: var(--viewport-width);
 }
 .contact-container h2{
     margin-bottom: 2rem;
 }
-#contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+/* #contact{
+  display: flex;
+  flex-direction: column;
+} */
+.contact-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-
-
-#subject, #message, #submit {
-  grid-column: 1/3;
-}
-
-
 input[type="tel"],
 input[type="text"],
 input[type="email"],
@@ -300,6 +342,7 @@ textarea,footer a {
     font-size: var(--s-font);
     outline: 0;
     padding: .5rem;
+    margin: .5rem 0;
     resize: none;
     text-decoration: none;
 }
@@ -344,15 +387,15 @@ textarea::placeholder {
 }
 
 
-#first, #last, #phone, #email {
+/* #first, #last, #phone, #email {
     width: 19.5rem;
-}
+} */
 
 
-#subject, #message {
+/* #subject, #message {
     max-width: 98vw;
     width: 42rem;
-}
+} */
 
 
 #message {
@@ -378,7 +421,7 @@ textarea::placeholder {
 
 
 @media screen and (max-width: 650px) {
-    #first,
+    /* #first,
     #last,
     #phone,
     #email,
@@ -386,7 +429,7 @@ textarea::placeholder {
     #message {
         width: 85vw;
         grid-column: 1/3;
-    }
+    } */
 
 
     #submit {
@@ -407,3 +450,22 @@ footer{
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
   }
+
+
+  /* @media (max-width: 600px) {
+    .HideOnMobile {
+      display: none;
+    }
+    .ShowOnMobile {
+      display: initial;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .HideOnMobile {
+      display: initial;
+    }
+    .ShowOnMobile {
+      display: none;
+    }
+  } */

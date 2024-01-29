@@ -7,124 +7,126 @@
     <script src="https://js.stripe.com/v3/"></script>
     <!-- <script src="checkout.js" defer></script> -->
     <script src="main.js" type="text/javascript" defer ></script>
-
-    <link href="styling/style.css" rel="stylesheet" type="text/css">
+    <!-- <<link rel="stylesheet" media="screen and (min-width: 601px)" href="desktop.css" />
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css" /> -->
+    <link href="styling/style-m.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul id="navLinks">
+            <li class="link1"><a href="#about">About Us</a></li>
+            <li class="link2"><a href="#offerings">Services</a></li>
+            <li class="link3"><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        
+    </nav>
     <header>
-        <nav>
-            <img id="logo" src="styling/logo.svg" />
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#offerings">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img id="logo" src="styling/logo.svg" />
     </header>
-        <section id="intro">
+
+    <section id="intro">
+        <!-- <section class="half"> -->
+            <h3>Life is a journey</h3>
+            <h1>Find your partner</h1>
+            <p>Arpri shares his experiences as a male professional with an extensive dating history. He aims to provide participants with a real life perspective from a male’s point of view. He evolved from a bachelor to an intentional loving and collaborative husband.</p>
+            <p>Rachel shares her experiences as a single woman turned adoring wife who has worked to balance her professional and life/romantic goals. She also brings her broad knowledge from the field of psychology. She is a licensed mental health clinician and runs her own practice and is licensed in three states.</p>
             <div class="intro-img">
                 <img class="photo" src="styling/intro-img.png">
             </div>
-            <section class="half">
-                <h3>Life is a journey</h3>
-                <h1>Find your partner in life</h1>
-                <p>Arpri shares his experiences as a male professional with an extensive dating history. He aims to provide participants with a real life perspective from a male’s point of view. He evolved from a bachelor to an intentional loving and collaborative husband.</p>
-                <p>Rachel shares her experiences as a single woman turned adoring wife who has worked to balance her professional and life/romantic goals. She also brings her broad knowledge from the field of psychology. She is a licensed mental health clinician and runs her own practice and is licensed in three states.</p>
 
-                <a href="#offerings" class="button-42">Explore Services</a>
-                <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                      <span class="close">&times;</span>
-                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTluTDlb-Bm0OcUtNxDJ46Pv9A_ch9ab8v0XdK2vyBEKq2XQ/viewform?embedded=true" width="640" height="1431" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                    
-
-                </div>
-                <!-- create modal to pop up and display iframe when users click "sign up"
-                -->
-            </section>
-        </section>
-
-        <section class="mission">
-            <section class="half">
-                <h3>CREATE A SUCCESSFUL dating strategy</h3>
-                <h1>build your dream relationship</h1>
-                <p>Our mission is to aid intentional singles identify potential obstacles, enabling them to foster intentional, long-term relationships that ultimately lead to marriage.</p>
-                <p>We aim to share our experiences and expertise in order to illustrate how realistic and reachable healthy loving relationships are–even amid today's challenging dating climate.</p>
-            </section> 
-            <div class="mission-img">
-                <img class="photo" src="styling/engaged.png">
+            <div class="signUp">
+                <a id="signupBtn" class="button-42">Sign up</a>
+                <p>Sign up to receive our free assessment tool</p>
             </div>
 
-        </section>
+            <div id="signupModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="signupClose close">&times;</span>
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9L_oQP1WmOJbaaA1jI5FsiDeCxE2Tp8_3mOGjVhntxdP3Ag/viewform?embedded=true" width="550" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+    </section>
 
-        <section id="offerings">
-            <div class="half">
-                <h1>Offerings</h1>
-                <section class="product">
-                    <div class="price">
-                        <h4>Master Class</h4>
-                        <!-- <div></div> -->
-                        <p >$149</p>
-                    </div>
-                    <p>Intentional Dating Essentials</p>
-                    <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
+    <section class="mission">
+        <section class="half">
+            <h3>CREATE A SUCCESSFUL dating strategy</h3>
+            <h1>build your dream relationship</h1>
+            <p>Our mission is to aid intentional singles identify potential obstacles, enabling them to foster intentional, long-term relationships that ultimately lead to marriage.</p>
+            <p>We aim to share our experiences and expertise in order to illustrate how realistic and reachable healthy loving relationships are–even amid today's challenging dating climate.</p>
+        </section> 
+        <div class="intro-img">
+            <img class="photo" src="styling/engaged.png">
+        </div>
+    </section>
+
+    <section id="offerings">
+            <h1>Offerings</h1>
+            <section class="product">
+                <div class="price">
+                    <h4>Master Class</h4>
+                    <p >$149</p>
+                </div>
+                <p>Intentional Dating Essentials</p>
+                <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
+                <div class="priceBtn"> 
                     <button id="myBtn" class="button-42" role="button">Register</button>
                     <button id="checkout" class="button-42" role="button">Submit Payment</button>
-                </section>
-                <section class="product">
-                    <div  class="price">
-                        <h4>Private Session</h4>
-                        <!-- <div></div> -->
-                        <p>$299</p>
-                    </div>
-                    <p>45-minute private session with both Pre & Rachel</p>
-                    <p>Send us a message through our<a href="#contact">contact form</a>to book!</p>
-                </section>
-                <section class="product">
-                    <div class="price">
-                        <h4>Group Sessions</h4>
-                        <!-- <div></div> -->
-                        <p>coming soon</p>
-                    </div>
-                    <!-- <p>Coming soon</p> -->
-                </section>
-            </div>
-            <p class="half">
-                <span>Disclaimer:</span>
+                </div>
+            </section>
+            <section class="product">
+                <div  class="price">
+                    <h4>Private Session</h4>
+                    <p>$299</p>
+                </div>
+                <p>45-minute private session with both Pre & Rachel</p>
+                <p>Send us a message through our<a href="#contact"> contact form </a>to book!</p>
+            </section>
+            <section class="product">
+                <div class="price">
+                    <h4>Group Sessions</h4>
+                    <p>coming soon</p>
+                </div>
+            </section>
+        <p class="half">
+            <span>Disclaimer:</span>
 **Please note services rendered are practical in application. While much of the content is informed by therapeutic knowledge, services rendered through Clarity Relationships is not therapy. Referrals to other providers will be provided to participants needing support with their emotional health needs.
-            </p>
-        </section>
+        </p>
+    </section>
 
-        <section id="about">
+    <section id="about">
+            <h1>Our courting story</h1>
+
             <div>
-                <h1>Our courting story</h1>
-                <div>
-                    <h3>ARPRI “PRE”</h3>
-                    <p>I’m originally from Illinois and am no stranger to traveling to explore different cultures and experiences. I relocated to Oklahoma from Arizona after exploring opportunities generated by the Tulsa Remote Program. Unfortunately, the opportunity fell through, and I found myself in a place that–at the surface, didn't appear to be a city with the cultural or dating opportunities I desired. I told myself that I’d try it out, but likely wouldn't stay long term.</p>
-                    <p>To my surprise and great gratitude, I found my wife, something I'd looked for for a long while, but continuously decided against simply settling for someone I wasn’t really sure about.</p>
-                    <h3>RACHEL</h3>
-                    <p>I'd definitely have to say this was a "God thing" being that Pre moved to a state he'd once declared he'd never move to (especially after he’d seen tornado wreckage on the news years back). We met on a dating website, I popped in and swiped from time to time maybe a handful of times. I rarely reached out to my matches or used the site , but when I saw that Pre and I mutually matched, I thought 'why not?'</p>
-                    <p>Pre's profile was simple, but well written, he was handsome, and at the surface, he appeared to have good character, so I said hello (the website required the women to open conversation after matching for safety purposes). That said, I was my usual skeptical self... right up to our first actual date. At my request, Pre patiently waited a month before we went on our first date to ensure I was comfortable meeting him.</p>
-                </div>
+                <h3>ARPRI “PRE”</h3>
+                <p>I’m originally from Illinois and am no stranger to traveling to explore different cultures and experiences. I relocated to Oklahoma from Arizona after exploring opportunities generated by the Tulsa Remote Program. Unfortunately, the opportunity fell through, and I found myself in a place that–at the surface, didn't appear to be a city with the cultural or dating opportunities I desired. I told myself that I’d try it out, but likely wouldn't stay long term.</p>
+                <p>To my surprise and great gratitude, I found my wife, something I'd looked for for a long while, but continuously decided against simply settling for someone I wasn’t really sure about.</p>
+                <h3>RACHEL</h3>
+                <p>I'd definitely have to say this was a "God thing" being that Pre moved to a state he'd once declared he'd never move to (especially after he’d seen tornado wreckage on the news years back). We met on a dating website, I popped in and swiped from time to time maybe a handful of times. I rarely reached out to my matches or used the site , but when I saw that Pre and I mutually matched, I thought 'why not?'</p>
+                <p>Pre's profile was simple, but well written, he was handsome, and at the surface, he appeared to have good character, so I said hello (the website required the women to open conversation after matching for safety purposes). That said, I was my usual skeptical self... right up to our first actual date. At my request, Pre patiently waited a month before we went on our first date to ensure I was comfortable meeting him.</p>
             </div>
-            <div class="row">
-                <!-- <div class="half"> -->
-                <section>
-                    <h3>us</h3>
-                    <p>Rachel is smart, beautiful, driven, thoughtful, and family-oriented. When courting I realized how easily I fit into her family. I also appreciate Rachel’s kind heart; on the day that we first met, she welcomed me after my two hour drive with a homemade mini chocolate cake--I didn’t think I’d like it (not a fan of chocolate cake), but it was delicious. The most important thing that I love about Rachel is that helped me to become closer to God. Without being overkill, she made sure that we studied the Bible together and sent me scriptures every morning prior to work.</p>
-                        
-                    <p>In my bachelor days, I was especially thankful that my (now) wife cooks really well. Once we became serious, she noticed the pathetic bachelor meals I was eating. After she teased me about it, she always ensured that I had enough dinner to eat when she was in Okc and I was in Tulsa . After about a month of meeting her, I already knew this woman was my wife. We worked to grow together and earn each other’s trust. We were engaged in six months and had our wedding around the one year mark.</p>
-                <!-- </div> -->
-                </section>
-                <div >
-                    <img class="about-img" src="styling/wedding.png">
-                </div>
+
+            <div class="intro-img">
+                <img class="photo wed" src="styling/wedding.png">
             </div>
+            
+            <div>
+                <h3>us</h3>
+                <p>Rachel is smart, beautiful, driven, thoughtful, and family-oriented. When courting I realized how easily I fit into her family. I also appreciate Rachel’s kind heart; on the day that we first met, she welcomed me after my two hour drive with a homemade mini chocolate cake--I didn’t think I’d like it (not a fan of chocolate cake), but it was delicious. The most important thing that I love about Rachel is that helped me to become closer to God. Without being overkill, she made sure that we studied the Bible together and sent me scriptures every morning prior to work.</p>
+                    
+                <p>In my bachelor days, I was especially thankful that my (now) wife cooks really well. Once we became serious, she noticed the pathetic bachelor meals I was eating. After she teased me about it, she always ensured that I had enough dinner to eat when she was in Okc and I was in Tulsa . After about a month of meeting her, I already knew this woman was my wife. We worked to grow together and earn each other’s trust. We were engaged in six months and had our wedding around the one year mark.</p>
+            </div>
+
+
             <div>
                 <h3>Rachel</h3>
                 <p>Pre is such a sweet, kind, gentle, tenacious, loving, and protective person. His love for his family and his patience are just a couple of the things that I adore about him, not to mention he is easy on the eyes :-D. He loves the people I love ...simply because I love them.</p>
@@ -133,32 +135,30 @@
                 <p>Rachel is smart, beautiful, driven, thoughtful, and family-oriented. When courting I realized how easily I fit into her family. I also appreciate Rachel’s kind heart; on the day that we first met, she welcomed me after my two hour drive with a homemade mini chocolate cake--I didn’t think I’d like it (not a fan of chocolate cake), but it was delicious. The most important thing that I love about Rachel is that helped me to become closer to God. Without being overkill, she made sure that we studied the Bible together and sent me scriptures every morning prior to work.</p>
                 <p>In my bachelor days, I was especially thankful that my (now) wife cooks really well. Once we became serious, she noticed the pathetic bachelor meals I was eating. After she teased me about it, she always ensured that I had enough dinner to eat when she was in Okc and I was in Tulsa . After about a month of meeting her, I already knew this woman was my wife. We worked to grow together and earn each other’s trust. We were engaged in six months and had our wedding around the one year mark.</p>
             </div>
-        </section>
-    <!-- Display a payment form -->
+    </section>
+
     <div id="checkout">
         <!-- Checkout will insert the payment form here -->
     </div>
 
-    <!-- CONTACT -->
-    <div class="contact-container" id="contact">
-        <section>
-            <h2 class="title">Reach Out</h2>
-         
-            <form name="contact" method="post" enctype="multipart/form-data" id="contact-form" data-netlify="true">
-                <input type="text" name="first" id="first" placeholder="First Name" />
-                <input type="text" name="last" id="last" placeholder="Last Name" />
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
-                <input type="email" name="email" style="cursor: pointer;" id="email" placeholder="Email" />
-                <input type="text" name="subject" id="subject" placeholder="Subject" />
-                <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-                <input type="submit" id="submit" value="Send Message" />
-            </form>
-        </section>
-    </div>
+<!-- CONTACT -->
+<div class="contact-container" id="contact">
+        <h2 class="title">Reach Out</h2>
+     
+        <form name="contact" method="post" enctype="multipart/form-data" id="contact-form" data-netlify="true">
+            <input type="text" name="first" id="first" placeholder="First Name" />
+            <input type="text" name="last" id="last" placeholder="Last Name" />
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+            <input type="email" name="email" style="cursor: pointer;" id="email" placeholder="Email" />
+            <input type="text" name="subject" id="subject" placeholder="Subject" />
+            <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+            <input type="submit" id="submit" value="Send Message" />
+        </form>
+</div>
 
-    <footer>
-        <a href="https://wo1vin.github.io/Portfolio/">&copy; Del Monte</a>
-    </footer>
-    
+<footer>
+    <a href="https://wo1vin.github.io/Portfolio/">&copy; Del Monte</a>
+</footer>
+
 </body>
 </html>
