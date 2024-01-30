@@ -29,10 +29,10 @@ h1,h2,h4{
     margin: 0;
     color: var(--darkgold);
 }
-h2, #offerings h1,.product h4{
+h2, #offeringsD h1,.product h4{
     color: var(--khaki);
 }
-.product p,#offerings>p{
+.product p,#offeringsD>p{
     color: var(--khaki);
 }
 h3{
@@ -89,7 +89,7 @@ a{
     color: var(--khaki);
     background-color:  var(--darkgreen);
 }
-#offerings .button-42{
+#offeringsD .button-42{
     color: var(--khaki);
     background-color: var(--green);
     z-index: 0;
@@ -102,7 +102,7 @@ li a:hover {
     color: var(--khaki);
 }
 a.button:hover,#submit:hover,
-#submit:active ,#offerings .button-42:hover, footer a:hover{
+#submit:active ,#offeringsD .button-42:hover, footer a:hover{
     border: 1px solid ;
     background-color: var(--darkbluegreen);
     color: var(--khaki);
@@ -142,7 +142,7 @@ li, a{
 body>section{
     margin: 2rem 0;
 }
-#intro, #offerings, .mission{
+#intro, #offeringsD, .mission{
    display: flex;
    justify-content: center;
    margin: 0 3rem;
@@ -224,13 +224,13 @@ body>section{
 }
 
 /* OFFERINGS */
-#offerings{
+#offeringsD{
     background-color: var(--darkgreen);
     background: linear-gradient(0deg, rgba(2,20,22,1) 0%,rgba(12,49,48,1) 10%, rgba(10,42,46,1) 90%, rgba(2,20,22,1) 100%);
     padding: 2rem 2rem 4rem 2rem;
     margin: 0;
 }
-#offerings>div{
+#offeringsD>div{
     width: max-content;
     margin-right: 3rem;
 }
@@ -242,11 +242,11 @@ body>section{
     justify-content: space-between;
     align-items: center;
 }
-.product div div{
+/* .product div div{
     width: 4rem;
     height: inherit;
     border-bottom: 1px solid rgb(100, 100, 100);;
-}
+} */
 .product p{
     margin: 0;
 }
@@ -258,7 +258,7 @@ body>section{
 p.half{
     margin-top: 3rem;
 }
-#offerings>p{
+#offeringsD>p{
     letter-spacing: .1rem;
     line-height: 1.5rem;
 }
@@ -266,13 +266,13 @@ p.half span{
     display: block;
     margin-bottom: 1rem;
 }
-#about{
+#aboutD{
     padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#about>*{
+#aboutD>*{
     width: 40rem;
 }
 .about-img{
@@ -292,7 +292,7 @@ div.imgBg{
         z-index: -1;
     
 }
-#offerings .button:hover{
+#offeringsD .button:hover{
     font-size: .75rem;
     padding: .75rem;
 }
@@ -472,10 +472,10 @@ textarea::placeholder {
         font-size: 2rem;
         line-height: 1.5rem;
     }
-    #offerings{
+    #offeringsD{
         align-items: center;
     }
-    #offerings h1{
+    #offeringsD h1{
         margin: 0 0 2rem 0;
     }
     .product>p{

@@ -18,22 +18,24 @@ function myFunction() {
 // var modal = document.getElementById("myModal");
 var signupModal = document.getElementById("signupModal");
 var registerModal = document.getElementById("registerModal");
+var signupModalD = document.getElementById("signupModalD");
+var registerModalD = document.getElementById("registerModalD");
 
 // Get the button that opens the modal
 // var btn = document.getElementById("myBtn");
 var signupBtn = document.getElementById("signupBtn");
 var registerBtn = document.getElementById("registerBtn");
+var signupBtnD = document.getElementById("signupBtnD");
+var registerBtnD = document.getElementById("registerBtnD");
 
 // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
 var signupSpan = document.getElementsByClassName("signupClose")[0];
 var registerSpan = document.getElementsByClassName("registerClose")[0];
+var signupSpanD = document.getElementsByClassName("signupCloseD")[0];
+var registerSpanD = document.getElementsByClassName("registerCloseD")[0];
 
 // When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//   modal.style.display = "block";
-//   btn.style.zIndex = "0";
-// }
 signupBtn.onclick = function() {
   signupModal.style.display = "block";
   signupBtn.style.zIndex = "0";
@@ -41,6 +43,14 @@ signupBtn.onclick = function() {
 registerBtn.onclick = function() {
   registerModal.style.display = "block";
   registerBtn.style.zIndex = "0";
+}
+signupBtnD.onclick = function() {
+  signupModalD.style.display = "block";
+  signupBtnD.style.zIndex = "0";
+}
+registerBtnD.onclick = function() {
+  registerModalD.style.display = "block";
+  registerBtnD.style.zIndex = "0";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -53,21 +63,26 @@ signupSpan.onclick = function() {
 registerSpan.onclick = function() {
   registerModal.style.display = "none";
 }
+signupSpanD.onclick = function() {
+  signupModalD.style.display = "none";
+}
+registerSpanD.onclick = function() {
+  registerModalD.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
 window.onclick = function(event) {
   if (event.target == signupModal) {
     signupModal.style.display = "none";
-  }
-}
-window.onclick = function(event) {
+  } 
   if (event.target == registerModal) {
     registerModal.style.display = "none";
+  }
+  if (event.target == signupModalD) {
+    signupModalD.style.display = "none";
+  }
+  if (event.target == registerModalD) {
+    registerModalD.style.display = "none";
   }
 }
 
