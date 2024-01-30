@@ -26,6 +26,9 @@ app.post('/create-checkout-session', async (req,res) => {
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
+            invoice_creation: {
+                enabled: true,
+            },
             line_items: req.body.items.map( item => {
                 const storeItem = storeItems.get(item.id)
                 return {

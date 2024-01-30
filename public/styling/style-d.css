@@ -168,11 +168,11 @@ body>section{
     margin: 0 0 1.25rem 0;
 }
 .signUp p{
-    margin: 0;
+    margin: 0; 
 }
 /* MODAL */
 /* The Modal (background) */
-.modal {
+.modal,#desktop .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -266,13 +266,13 @@ p.half span{
     display: block;
     margin-bottom: 1rem;
 }
-#aboutD{
+#aboutD,#success {
     padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#aboutD>*{
+#aboutD>*,#success>*{
     width: 40rem;
 }
 .about-img{
@@ -301,7 +301,6 @@ div.imgBg{
     padding: .5rem .75rem;
     border-radius: 1rem;
 }
-
 /* CONTACT */
 .contact-container,footer {
     padding: 6rem;
