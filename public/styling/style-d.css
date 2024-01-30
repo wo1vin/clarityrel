@@ -285,9 +285,10 @@ div.imgBg{
     background-color: var(--darkgreen);
     width: 100%;
 
-        height: 48vh;
+        height: 19rem;
         position: absolute;
-        bottom: -1923px;
+        /* bottom: -1923px; */
+        top: 2279px;
         z-index: -1;
     
 }
@@ -497,9 +498,21 @@ textarea::placeholder {
   }
 
 
-@media screen and (min-width: 801px) {
-  #about>*{
-    width: 40rem;
-
-  }
+@media screen and (min-width: 823px) {
+    div.imgBg{
+        top: 2265px;
+    }
+}
+@media screen and (min-width: 915px) {
+    div.imgBg{
+        top: 2250px;
+    }
+}
+@media screen and (min-width: 1027px) {
+    div.imgBg{
+        top: 2236px;
+    }
+    .mission .half{
+        width: 27rem;
+    }
 }
