@@ -17,7 +17,7 @@ app.use(express.json());
 const storeItems = new Map([
 //   [1, { priceInCents: 0, name: "TEST 01" }],
   [1, { priceInCents: 14900, name: "Master Class" }],
-//   [2, { priceInCents: 29900, name: "Private Session" }]
+  [2, { priceInCents: 29900, name: "Private Session" }]
 ])
 
 // create checkout session

@@ -82,14 +82,17 @@ nav {
     z-index: 0;
     border-radius: 0;
 }
-.link1{
+.link0{
     top: 47px;
+}
+.link1{
+    top: 141px;
 }
 .link2{
     top: 94px;
 }
 .link3{
-    top: 141px;
+    top: 188px;
 }
 /* Style navigation menu links */
 nav a {
@@ -136,17 +139,22 @@ li {
 
 
 /* INTRO */
-#intro, .mission, #offerings,#about{
-    padding: 3rem;
+#intro, .mission,#about{
+    padding: 2rem;
+    /* padding: 3rem; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+#offerings{
+    padding: 1rem;
+}
 .photo{
     width: 100%;
-    margin: -3rem 0 -9rem 1.5rem;
+    /* margin: -3rem 0 -9rem 1.5rem; */
+    margin: 0 0 -5rem 0;
     position: relative;
-    left: 24px;
+    /* left: 24px; */
     z-index: -1;
 }
 #intro p{
@@ -159,7 +167,9 @@ li {
 .signUp p{
     text-align: center;
 }
-
+.advise{
+    color: var(--khaki);
+}
 
 /* MODAL */
 /* MODAL */
@@ -458,8 +468,27 @@ footer{
     to {top: 0; opacity: 1}
   }
 
+  @media screen and (min-width: 500px) {
+    #offerings{
+        padding: 2rem;
+    }
+    .price{
+        width: 25rem;
+    }
+    .photo{
+        margin: -4rem 0 -6rem 0;
+    }
+  }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (min-width: 700px) {
+    .photo{
+        margin: -6rem 0 -8rem 0;
+    }
+    #intro, .mission, #about {
+        padding: 3rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
     #desktop {
       display: none;
     }
@@ -468,7 +497,7 @@ footer{
     }
   }
   
-  @media screen and (min-width: 801px) {
+  @media screen and (min-width: 901px) {
     #desktop {
       display: initial;
     }

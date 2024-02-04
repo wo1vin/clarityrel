@@ -86,20 +86,52 @@ window.onclick = function(event) {
   }
 }
 
+// PRODUCT MENU / CART
+let items = []
+const product1 = document.querySelector('#addProduct1');
+const product2 = document.querySelector('#addProduct2');
+
+product1.addEventListener('click', ()=>{
+  if(product1.innerText === "Remove from cart"){
+    product1.innerText = "Add to cart";
+    items.splice(0,1);
+    console.log(items,"Masterclass removed from cart.");
+  } else {
+    product1.innerText = "Remove from cart";
+    items.splice(0,0,{ id: 1, quantity: 1 })
+    console.log(items,"Masterclass added to cart.");
+  }
+})
+product2.addEventListener('click', ()=>{
+  if(product2.innerText === "Remove from cart"){
+    product2.innerText = "Add to cart";
+    items.splice(1,1);
+    console.log(items,"Private session removed from cart.");
+  } else {
+    product2.innerText = "Remove from cart";
+    items.splice(1,0,{ id: 2, quantity: 1 });
+    console.log(items,"Private session added to cart.");
+  }
+})
 
 // CHECKOUT
 
-const button = document.querySelector('#checkout');
+// const button = document.querySelector('#checkout');
+const checkoutBtnD = document.querySelector('#checkoutBtnD');
+const checkoutBtnM = document.querySelector('#checkoutBtnM');
 
-button.addEventListener('click',()=>{
-    console.log('checkout');
+checkoutBtnD.addEventListener('click',stripeCheckout);
+checkoutBtnM.addEventListener('click',stripeCheckout);
+
+function stripeCheckout(){
+    console.log('checkout', items);
     fetch(`/create-checkout-session`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        items: [{ id: 1, quantity: 1 }],
+        items: items,
       }),
     })
     .then(res => {
@@ -112,4 +144,4 @@ button.addEventListener('click',()=>{
     .catch(e => {
       console.error(e.error)
     })
-})
+}

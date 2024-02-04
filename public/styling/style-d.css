@@ -85,7 +85,7 @@ a{
   border: 0;
   transition: box-shadow .2s;
 }
-#intro .button-42{
+#introD .button-42{
     color: var(--khaki);
     background-color:  var(--darkgreen);
 }
@@ -97,7 +97,7 @@ a{
 .button-42:hover,li a:hover {
   box-shadow: rgb(1, 28, 21) 0 3px 8px;
 }
-li a:hover {
+li a:hover, #aboutD a:hover {
     background-color: rgb(3, 64, 66);
     color: var(--khaki);
 }
@@ -142,23 +142,23 @@ li, a{
 body>section{
     margin: 2rem 0;
 }
-#intro, #offeringsD, .mission{
+#introD, #offeringsD, .mission{
    display: flex;
    justify-content: center;
    margin: 0 3rem;
 }
 
-#intro{
+#introD{
     margin-bottom: -3rem;
 }
-.intro-img,.mission-img{
+.introD-img,.mission-img{
     margin-right: -2rem;
-    position: relative;
-    z-index: -1;
 }
 .photo{
     margin-top: -6rem;
     width: 30rem;
+    position: relative;
+    z-index: -1;
 }
 .half{
     width: 33rem;
@@ -237,10 +237,22 @@ body>section{
 .product{
     padding: 0 0 1rem 0;
 }
-.product > div{
+.product > div.price{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.product .desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desc button{
+    width: max-content;
+}
+.desc div{
+    width: 100%;
+    padding-left: 2rem;
 }
 /* .product div div{
     width: 4rem;
@@ -418,8 +430,17 @@ textarea::placeholder {
     width: fit-content;
     font-family: 'Comfortaa', sans-serif;
 }
-
-
+#aboutD a{
+    color: var(--darkgreen);
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    width: max-content;
+}
+#offerings>p{
+    color: var(--khaki);
+}
 
 @media screen and (max-width: 650px) {
     #first,
@@ -450,7 +471,7 @@ textarea::placeholder {
   }
 
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     #desktop {
       display: none;
     }
@@ -459,7 +480,7 @@ textarea::placeholder {
     }
   }
   
-  @media screen and (min-width: 801px) {
+  @media screen and (min-width: 901px) {
     #desktop {
       display: initial;
     }
@@ -480,10 +501,11 @@ textarea::placeholder {
     .product>p{
         padding-left: 1rem;
     }
-    div.masterclassBtns{
+    div.priceBtns{
+        display: flex;
         justify-content: center;
     }
-    div.masterclassBtns button:first-of-type{
+    div.priceBtns button:first-of-type{
         margin-right: 1rem;
     }
     #desktop p, .button-42{
@@ -493,21 +515,23 @@ textarea::placeholder {
     .button-42{
         margin: .25rem 0 ;
     }
-
+    .advise{
+        color: var(--khaki);
+    }
   }
 
 
-@media screen and (min-width: 823px) {
+@media screen and (min-width: 923px) {
     div.imgBg{
         top: 2265px;
     }
 }
-@media screen and (min-width: 915px) {
+@media screen and (min-width: 1015px) {
     div.imgBg{
         top: 2250px;
     }
 }
-@media screen and (min-width: 1027px) {
+@media screen and (min-width: 1127px) {
     div.imgBg{
         top: 2236px;
     }

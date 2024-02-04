@@ -8,8 +8,8 @@
     <!-- <script src="checkout.js" defer></script> -->
     <script src="main.js" type="text/javascript" defer ></script>
 
-    <link rel="stylesheet" media="screen and (max-width:800px)" href="styling/style-m.css" /> 
-    <link rel="stylesheet" media="screen and (min-width:801px)" href="styling/style-d.css" />
+    <link rel="stylesheet" media="screen and (max-width:900px)" href="styling/style-m.css" /> 
+    <link rel="stylesheet" media="screen and (min-width:901px)" href="styling/style-d.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
             <i class="fa fa-bars"></i>
         </a>
         <ul id="navLinks">
+            <li class="link0"><a href="#logo">Home</a></li>
             <li class="link1"><a href="#about">About Us</a></li>
             <li class="link2"><a href="#offerings">Services</a></li>
             <li class="link3"><a href="#contact">Contact</a></li>
@@ -82,7 +83,7 @@
                 <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
                 <div class="priceBtn"> 
                     <button id="registerBtn" class="button-42" role="button">Register</button>
-                    <button id="checkout" class="button-42" role="button">Submit Payment</button>
+                    <button id="checkoutBtnM" class="button-42" role="button">Submit Payment</button>
                 </div>
 
                 <div id="registerModal" class="modal">
@@ -107,6 +108,7 @@
                     <p>coming soon</p>
                 </div>
             </section>
+            <p class="advise">Please use the same email for both the registration and the checkout process.</p>
         <p class="half">
             <span>Disclaimer:</span>
 **Please note services rendered are practical in application. While much of the content is informed by therapeutic knowledge, services rendered through Clarity Relationships is not therapy. Referrals to other providers will be provided to participants needing support with their emotional health needs.
@@ -179,8 +181,6 @@
 
 
 
-
-
 <div id="desktop">
 
     <header>
@@ -193,7 +193,7 @@
             </ul>
         </nav>
     </header>
-        <section id="intro">
+        <section id="introD">
             <div class="intro-img">
                 <img class="photo" src="styling/intro-img.png">
             </div>
@@ -243,13 +243,13 @@
                         <!-- <div></div> -->
                         <p >$149</p>
                     </div>
-                    <p>Intentional Dating Essentials</p>
-                    <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
-                    <div class="masterclassBtns">
-                        <button id="registerBtnD" class="button-42" role="button">Register</button>
-                        <button id="checkout" class="button-42" role="button">Submit Payment</button>
+                    <div class="desc">
+                        <div>
+                            <p>Intentional Dating Essentials</p>
+                            <p>March 2nd, 2024 - 1:00 p.m. CST / 2 p.m. EST</p>
+                        </div>
+                        <button id="addProduct1" class="button-42" role="button">Add to cart</button>
                     </div>
-
                     <div id="registerModalD" class="modal">
                         <!-- Modal content -->
                         <div class="modal-content">
@@ -264,9 +264,16 @@
                         <!-- <div></div> -->
                         <p>$299</p>
                     </div>
-                    <p>45-minute private session with both Pre & Rachel</p>
-                    <p>Send us a message through our<a href="#contact">contact form</a>to book!</p>
+                    <div class="desc">
+                        <div>
+                            <p>45-minute private session with both Pre & Rachel</p>
+                            <p>Send us a message through our<a href="#contactD">contact form</a>to book!</p>
+                        </div>
+                        <button id="addProduct2" class="button-42" role="button">Add to cart</button>
+                    </div>
+                    
                 </section>
+                
                 <section class="product">
                     <div class="price">
                         <h4>Group Sessions</h4>
@@ -275,8 +282,14 @@
                     </div>
                     <!-- <p>Coming soon</p> -->
                 </section>
+
+                <div class="priceBtns">
+                    <button id="registerBtnD" class="button-42" role="button">Register</button>
+                    <button id="checkoutBtnD" class="button-42" role="button">Checkout</button>
+                </div>
+                <p class="advise">Please use the same email for both the registration and the checkout process.</p>
             </div>
-            <p class="half">
+            <p class="half"> 
                 <span>Disclaimer:</span>
 **Please note services rendered are practical in application. While much of the content is informed by therapeutic knowledge, services rendered through Clarity Relationships is not therapy. Referrals to other providers will be provided to participants needing support with their emotional health needs.
             </p>
@@ -319,16 +332,17 @@
                 <p>Rachel is smart, beautiful, driven, thoughtful, and family-oriented. When courting I realized how easily I fit into her family. I also appreciate Rachel’s kind heart; on the day that we first met, she welcomed me after my two hour drive with a homemade mini chocolate cake--I didn’t think I’d like it (not a fan of chocolate cake), but it was delicious. The most important thing that I love about Rachel is that helped me to become closer to God. Without being overkill, she made sure that we studied the Bible together and sent me scriptures every morning prior to work.</p>
                 <p>In my bachelor days, I was especially thankful that my (now) wife cooks really well. Once we became serious, she noticed the pathetic bachelor meals I was eating. After she teased me about it, she always ensured that I had enough dinner to eat when she was in Okc and I was in Tulsa . After about a month of meeting her, I already knew this woman was my wife. We worked to grow together and earn each other’s trust. We were engaged in six months and had our wedding around the one year mark.</p>
             </div>
+            <a href="#introD">Back to top</a>
+
         </section>
         <div class="imgBg">
 
         </div>
 
     <!-- Display a payment form -->
-    <div id="checkout">
+    <!-- <div id="checkout"> -->
         <!-- Checkout will insert the payment form here -->
-    </div>
-
+    <!-- </div> -->
     <!-- CONTACT -->
     <div class="contact-container" id="contactD">
         <section>
