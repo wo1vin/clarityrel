@@ -146,9 +146,6 @@ li {
     flex-direction: column;
     align-items: flex-start;
 }
-#offerings{
-    padding: 1rem;
-}
 .photo{
     width: 100%;
     /* margin: -3rem 0 -9rem 1.5rem; */
@@ -277,9 +274,13 @@ li {
 
 /* OFFERINGS */
 #offerings{
+    padding: 1rem;
     background-color: var(--darkgreen);
     background: linear-gradient(0deg, rgba(2,20,22,1) 0%,rgba(12,49,48,1) 10%, rgba(10,42,46,1) 90%, rgba(2,20,22,1) 100%);
     /* padding: 2.5rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #offerings h1{
     margin: 2rem 0 1rem 0;
@@ -288,7 +289,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85vw;
+    width: 85%;
     background-color: var(--green);
     padding: 0.5rem 0.75rem;
     border-radius: 1rem;
@@ -300,13 +301,27 @@ li {
 }
 .product{
     padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.product>p{
+    width: 85%;
 }
 div.priceBtn{
     display: flex;
     justify-content: space-evenly;
 }
+.priceBtn button{
+    margin: 0 1rem;
+}
 #offerings > p a{
     margin: 0 .5rem;
+}
+.advise, #offerings  p.half{
+    font-size: .8rem;
+    padding: 0 1rem;
 }
 /* .wed{
     margin: 1rem 0 -6rem 0;
@@ -478,8 +493,20 @@ footer{
     .photo{
         margin: -4rem 0 -6rem 0;
     }
+    .product>p{
+        width: 75%;
+    }
+    .advise,#offerings p.half{
+        padding: 0 3rem;
+        width: 100%;
+    }
   }
 
+  @media screen and (min-width: 600px) {
+    .product>p{
+        width: 65%;
+    }
+  }
   @media screen and (min-width: 700px) {
     .photo{
         margin: -6rem 0 -8rem 0;

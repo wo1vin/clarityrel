@@ -90,29 +90,42 @@ window.onclick = function(event) {
 let items = []
 const product1 = document.querySelector('#addProduct1');
 const product2 = document.querySelector('#addProduct2');
+const product1M = document.querySelector('#addProduct1M');
+const product2M = document.querySelector('#addProduct2M');
 
-product1.addEventListener('click', ()=>{
-  if(product1.innerText === "Remove from cart"){
+product1.addEventListener('click', addClassToCart);
+product1M.addEventListener('click', addClassToCart);
+product2.addEventListener('click', addSessionToCart);
+product2M.addEventListener('click', addSessionToCart);
+
+function addClassToCart () {
+  if(product1.innerText === "Remove from cart" ||
+     product1M.innerText === "Remove from cart"){
     product1.innerText = "Add to cart";
+    product1M.innerText = "Add to cart";
     items.splice(0,1);
     console.log(items,"Masterclass removed from cart.");
   } else {
     product1.innerText = "Remove from cart";
+    product1M.innerText = "Remove from cart";
     items.splice(0,0,{ id: 1, quantity: 1 })
     console.log(items,"Masterclass added to cart.");
   }
-})
-product2.addEventListener('click', ()=>{
-  if(product2.innerText === "Remove from cart"){
+}
+function addSessionToCart(){
+  if(product2.innerText === "Remove from cart" ||
+     product2M.innerText === "Remove from cart"){
     product2.innerText = "Add to cart";
+    product2M.innerText = "Add to cart";
     items.splice(1,1);
     console.log(items,"Private session removed from cart.");
   } else {
     product2.innerText = "Remove from cart";
+    product2M.innerText = "Remove from cart";
     items.splice(1,0,{ id: 2, quantity: 1 });
     console.log(items,"Private session added to cart.");
   }
-})
+}
 
 // CHECKOUT
 
