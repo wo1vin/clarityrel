@@ -3,7 +3,8 @@ const app = express();
 const cors = require("cors");
 const path = require('path')
 require('dotenv').config({path: './config/.env'});
-const stripe = require('stripe')(process.env.STRIPE_KEY);
+const stripe = require('stripe')(STRIPE_KEY);
+// const stripe = require('stripe')(process.env.STRIPE_KEY);
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
@@ -15,7 +16,8 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 app.use(
     cors({
-      origin: "https://clarityrelationships.com",
+      //origin: "https://localhost:3000",
+      origin: "https://clarityrelationships.com/",
     })
 )
 

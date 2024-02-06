@@ -141,6 +141,7 @@ function stripeCheckout(){
     fetch(`/create-checkout-session`, {
       method: 'POST',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*",
         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
@@ -158,7 +159,7 @@ function stripeCheckout(){
     })
     .then(({ url }) => {
       console.log('display cart')
-      window.location.assign = url 
+      window.location = url 
     })
     .catch(e => {
       console.log("error")
