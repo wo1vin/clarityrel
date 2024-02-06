@@ -151,14 +151,14 @@ function stripeCheckout(){
         items: items,
       }),
     })
-    .then( function sendIt(res) {
+    .then( res => {
       console.log(res,'fetch sent')
       if (res.ok) return res.json()
       return res.json().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
       console.log('display cart')
-      window.location = url 
+      window.location.assign = url 
     })
     .catch(e => {
       console.log("error")
