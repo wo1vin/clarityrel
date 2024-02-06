@@ -64,6 +64,6 @@ app.get('/', (req,res)=>{
 })
 
 //Server Running
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log("Server is running, you better catch it!");
 });
