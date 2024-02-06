@@ -151,7 +151,7 @@ function stripeCheckout(){
         items: items,
       }),
     })
-    .then(res => {
+    .then( res => {
       console.log('fetch sent')
       if (res.ok) return res.json()
       return res.json().then(json => Promise.reject(json))

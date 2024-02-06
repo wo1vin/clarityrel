@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/wo1vin/clarityrel/issues"
   },
-  "homepage": "https://github.com/wo1vin/clarityrel#readme",
+  "homepage": "https://clarityrelationships.com",
   "dependencies": {
     "-": "^0.0.1",
     "cors": "^2.8.5",
