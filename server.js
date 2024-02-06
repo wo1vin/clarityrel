@@ -14,7 +14,7 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 app.use(
     cors({
-      origin: "http://clarityrelationships.com",
+      origin: "https://clarityrelationships.com",
     })
 )
 
@@ -54,8 +54,8 @@ app.post('/create-checkout-session', async (req,res) => {
                     quantity: item.quantity,
                 }
             }),
-            success_url: `http://clarityrelationships.com/success.html`,
-            cancel_url: `http://clarityrelationships.com/cancel.html` 
+            success_url: `https://clarityrelationships.com/success.html`,
+            cancel_url: `https://clarityrelationships.com/cancel.html` 
             // success_url: `${process.env.SERVER_URL}/success.html`,
             // cancel_url: `${process.env.SERVER_URL}/cancel.html` 
         })
