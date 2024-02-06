@@ -5,6 +5,18 @@ const path = require('path')
 require('dotenv').config({path: './config/.env'});
 const stripe = require('stripe')(process.env.STRIPE_KEY);
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+app.use(allowCrossDomain);
+app.use(
+    cors({
+      origin: "http://clarityrelationships.com",
+    })
+)
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -53,11 +65,6 @@ app.post('/create-checkout-session', async (req,res) => {
     }
 })
 
-app.use(
-    cors({
-      origin: "http://clarityrelationships.com",
-    })
-)
 
 app.get('/', (req,res)=>{ 
     res.render('index')
