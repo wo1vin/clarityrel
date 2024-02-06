@@ -9,7 +9,7 @@ var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Credentials', true)
+    res.header('Access-Control-Allow-Credentials', 'true')
     next();
 }
 app.use(allowCrossDomain);
@@ -36,6 +36,7 @@ const storeItems = new Map([
 // create checkout session
 app.post('/create-checkout-session', async (req,res) => {
     try {
+        console.log("post",req,res)
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
@@ -60,6 +61,7 @@ app.post('/create-checkout-session', async (req,res) => {
             // success_url: `${process.env.SERVER_URL}/success.html`,
             // cancel_url: `${process.env.SERVER_URL}/cancel.html` 
         })
+        console.log("await",req,res)
         res.json({ url: session.url })
     } catch (e) {
         res.status(500).json({ error: e.message })

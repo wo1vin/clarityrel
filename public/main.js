@@ -151,7 +151,7 @@ function stripeCheckout(){
         items: items,
       }),
     })
-    .then( res => {
+    .then( function sendIt(res) {
       console.log(res,'fetch sent')
       if (res.ok) return res.json()
       return res.json().then(json => Promise.reject(json))
@@ -161,7 +161,7 @@ function stripeCheckout(){
       window.location = url 
     })
     .catch(e => {
-      //console.log(res,e)
+      console.log("error")
       console.error(e.error)
     })
 }
