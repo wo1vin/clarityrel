@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const path = require('path')
 require('dotenv').config({path: './config/.env'});
-const stripe = require('stripe')(STRIPE_KEY);
+const stripe = require('stripe')(sk_test_51OeR19Hp6rf1EiLQ9qkoGhCYAdZfINnzo5LUBXfIWhUtlmSBqQR6pKpQI9Vma6GMMxjDobgpEnAXdohe60RjaMHn00QKv0gg2T);
 // const stripe = require('stripe')(process.env.STRIPE_KEY);
 
 var allowCrossDomain = function(req, res, next) {
