@@ -138,7 +138,7 @@ checkoutBtnM.addEventListener('click',stripeCheckout);
 
 function stripeCheckout(){
     console.log('checkout', items);
-    fetch(`https://clarityrelationships.com/create-checkout-session`, {
+    fetch(`/create-checkout-session`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
