@@ -141,7 +141,11 @@ function stripeCheckout(){
     fetch(`/create-checkout-session`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*",
+        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Credentials': true
       },
       body: JSON.stringify({
         items: items,
@@ -150,7 +154,7 @@ function stripeCheckout(){
     .then(res => {
       console.log('fetch sent')
       if (res.ok) return res.json()
-      return res.json().then(json => Promise.reject(json))
+      return res.send().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
       window.location = url 
@@ -158,6 +162,6 @@ function stripeCheckout(){
     })
     .catch(e => {
       console.log('catch',e)
-      //console.error(e.error)
+      console.error(e.error)
     })
 }
