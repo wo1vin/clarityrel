@@ -145,7 +145,7 @@ function stripeCheckout(){
         "Access-Control-Allow-Origin": "*",
         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
         'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Credentials': true
+        'Access-Control-Allow-Credentials': 'true'
       },
       body: JSON.stringify({
         items: items,
@@ -157,11 +157,11 @@ function stripeCheckout(){
       return res.json().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
-      console.log(res,url,'display cart')
+      console.log('display cart')
       window.location = url 
     })
     .catch(e => {
-      console.log(res,url,'catch',e)
+      //console.log(res,e)
       console.error(e.error)
     })
 }
