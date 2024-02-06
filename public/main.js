@@ -157,8 +157,8 @@ function stripeCheckout(){
       return res.send().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
-      window.location = url 
       console.log('display cart')
+      window.location = url 
     })
     .catch(e => {
       console.log('catch',e)
