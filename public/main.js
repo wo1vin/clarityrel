@@ -148,13 +148,16 @@ function stripeCheckout(){
       }),
     })
     .then(res => {
+      console.log('fetch sent')
       if (res.ok) return res.json()
       return res.json().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
       window.location = url 
+      console.log('display cart')
     })
     .catch(e => {
-      console.error(e.error)
+      console.log('catch',e)
+      //console.error(e.error)
     })
 }
