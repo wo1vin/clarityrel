@@ -3,8 +3,7 @@ const app = express();
 const cors = require("cors");
 const path = require('path')
 require('dotenv').config({path: './config/.env'});
-const stripe = require('stripe')(process.env.STRIPE_KEY || STRIPE_KEY);
-// const stripe = require('stripe')(process.env.STRIPE_KEY);
+const stripe = require('stripe')(process.env.STRIPE_KEY);
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
