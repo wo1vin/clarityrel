@@ -166,3 +166,45 @@ function stripeCheckout(){
       console.error(e.error)
     })
 }
+
+
+// CONTACT FORM
+const contactForm = document.getElementById('submit');
+const firstName = document.getElementById('first');
+const lastName = document.getElementById('last');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+
+contactForm.addEventListener('click',(e)=>{
+  console.log('send message');
+  e.preventDefault();
+
+  let formData = {
+    firstName : firstName.value,
+    lastName : lastName.value,
+    email : email.value,
+    subject : subject.value,
+    message : message.value
+  }
+  //console.log(formData);
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST','/');
+  xhr.setRequestHeader('content-type','application/json');
+  xhr.onload = function(){
+    console.log(xhr.responseText);
+    if(xhr.responseText === 'success'){
+      console.log('email sent');
+      firstName.value = '',
+      email.value = '',
+      subject.value = '',
+      message.value = '';
+    } else {
+    console.log('Something went wrong!')
+    }
+  }
+
+  xhr.send(JSON.stringify(formData));
+
+})

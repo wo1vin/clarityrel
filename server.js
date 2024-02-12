@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const cors = require("cors");
-const path = require('path')
+const path = require('path');
+const { error } = require('console');
 require('dotenv').config({path: './config/.env'});
 const stripe = require('stripe')(process.env.STRIPE_KEY);
+const nodemailer = require('nodemailer');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
@@ -21,11 +23,11 @@ app.use(
 )
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, '/public')))
 
 //body parsing
 app.use(express.json());
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')))
 
 // create the items that can be purchased
 const storeItems = new Map([
@@ -69,8 +71,39 @@ app.post('/create-checkout-session', async (req,res) => {
     }
 })
 
+// send email from contact form
+app.post('/', (req,res)=>{
+    console.log(req.body);
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: `${process.env.MAIL_USER}`,
+            pass: `${process.env.MAIL_PASS}`
+        }
+    })
+
+    const mailOptions = {
+        from: req.body.email,
+        to: `${process.env.MAIL_USER}`,
+        subject: `Contact Form ${req.body.subject}`,
+        text: req.body.message
+    }
+
+    transporter.sendMail(mailOptions, (error,info)=>{
+        if(error){
+            console.error(error);
+            res.send('error');
+        } else {
+            console.log('Email sent successfully');
+            res.send('success');
+        }
+    })
+})
+
 
 app.get('/', (req,res)=>{ 
+    
     res.render('index')
 })
 
