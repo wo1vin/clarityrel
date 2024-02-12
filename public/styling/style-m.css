@@ -42,9 +42,14 @@ h4{
     font-size: 1rem;
     font-weight: 600;
 }
-p{
+p,h5{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
+}
+h5{
+    font-size: 1.15rem;
+    margin: 2rem;
+    text-align: center;
 }
 a{
     font-family: 'Comfortaa', sans-serif;
@@ -52,7 +57,6 @@ a{
     color: var(--lilac);
     transition: all .2s;
 }
-
 
 /* navigation menu */
 nav {
@@ -323,19 +327,11 @@ div.priceBtn{
     font-size: .8rem;
     padding: 0 1rem;
 }
-/* .wed{
-    margin: 1rem 0 -6rem 0;
-} */
-/* .img-frame{
-    width: 98%;
-} */
-/* .about-img{
-    width: 98%;
-    object-fit: contain;
-    margin-bottom: -6rem; 
-} */
 
 /* CONTACT */
+.contact-container>p{
+    color: var(--khaki);
+}
 .contact-container,footer {
     padding: 3rem;
     background: rgb(12, 49, 48);
