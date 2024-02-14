@@ -13,6 +13,7 @@
 body{
     margin: 0;
     width: 100vw;
+    background-color: var(--lilac);
 }
 
 /* TEXT */
@@ -42,9 +43,15 @@ h4{
     font-size: 1rem;
     font-weight: 600;
 }
-p{
+p,h5{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
+}
+h5{
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 2rem;
+    text-align: center;
 }
 a{
     font-family: 'Comfortaa', sans-serif;
@@ -52,7 +59,6 @@ a{
     color: var(--lilac);
     transition: all .2s;
 }
-
 
 /* navigation menu */
 nav {
@@ -149,10 +155,13 @@ li {
 .photo{
     width: 100%;
     /* margin: -3rem 0 -9rem 1.5rem; */
-    margin: 0 0 -5rem 0;
-    position: relative;
+    /* margin: 0 0 -5rem 0; */
+    /* position: relative; */
     /* left: 24px; */
     z-index: -1;
+}
+.intro-img{
+    margin: -8rem 0;
 }
 #intro p{
     margin: 0 0 .5rem 0;
@@ -323,19 +332,13 @@ div.priceBtn{
     font-size: .8rem;
     padding: 0 1rem;
 }
-/* .wed{
-    margin: 1rem 0 -6rem 0;
-} */
-/* .img-frame{
-    width: 98%;
-} */
-/* .about-img{
-    width: 98%;
-    object-fit: contain;
-    margin-bottom: -6rem; 
-} */
-
+.advise{
+    text-align: center;
+}
 /* CONTACT */
+.contact-container>p{
+    color: var(--khaki);
+}
 .contact-container,footer {
     padding: 3rem;
     background: rgb(12, 49, 48);
@@ -413,7 +416,9 @@ textarea::placeholder {
   color: var(--foreground-light);
 }
 
-
+.intro-img .photo.wed{
+    margin: -10rem 0 -6rem 0;
+}
 #first, #last, #phone, #email, #subject {
   height: 2.5rem;
 }
@@ -490,9 +495,9 @@ footer{
     .price{
         width: 25rem;
     }
-    .photo{
+    /* .photo{
         margin: -4rem 0 -6rem 0;
-    }
+    } */
     .product>p{
         width: 75%;
     }
@@ -508,9 +513,9 @@ footer{
     }
   }
   @media screen and (min-width: 700px) {
-    .photo{
+    /* .photo{
         margin: -6rem 0 -8rem 0;
-    }
+    } */
     #intro, .mission, #about {
         padding: 3rem;
     }
@@ -530,5 +535,25 @@ footer{
     }
     #mobile {
       display: none;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .intro-img .photo.wed{
+        margin: -8rem 0 -4rem 0;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .intro-img .photo.wed{
+        margin: -6rem 0 -3rem 0;
+    }
+  }
+  @media screen and (max-width: 574px) {
+    .intro-img .photo.wed{
+        margin: -3rem 0 -1rem 0;
+    }
+  }
+  @media screen and (max-width: 444px) {
+    .intro-img .photo.wed{
+        margin: -1rem 0 0 0;
     }
   }

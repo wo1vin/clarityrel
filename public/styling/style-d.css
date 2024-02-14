@@ -29,10 +29,7 @@ h1,h2,h4{
     margin: 0;
     color: var(--darkgold);
 }
-h2, #offeringsD h1,.product h4{
-    color: var(--khaki);
-}
-.product p,#offeringsD>p{
+h2, #offeringsD h1,.product h4,.product p,#offeringsD>p{
     color: var(--khaki);
 }
 h3{
@@ -47,9 +44,15 @@ h4{
     font-size: 1rem;
     font-weight: 600;
 }
-p{
+p,h5{
     color: rgb(100, 100, 100);
     font-family: 'Comfortaa', sans-serif;
+}
+h5{
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
 }
 li>a{
     color: var(--grey);
@@ -170,6 +173,11 @@ body>section{
 .signUp p{
     margin: 0; 
 }
+.signUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* MODAL */
 /* The Modal (background) */
 .modal,#desktop .modal {
@@ -289,20 +297,19 @@ p.half span{
 }
 .about-img{
     width: 30rem;
-    margin: -2rem 0 -9rem 0;
-    position: relative;
-    right: -173px;
+    opacity: .80;
+    margin: -9rem 0px -9rem 12rem;
+    /* position: relative; */
+    /* right: -173px; */
 }
 div.imgBg{
     background-color: var(--darkgreen);
     width: 100%;
-
-        height: 19rem;
+        height: 10.65rem;
         position: absolute;
         /* bottom: -1923px; */
-        top: 2279px;
+        top: 2390px;
         z-index: -1;
-    
 }
 #offeringsD .button:hover{
     font-size: .75rem;
@@ -313,7 +320,12 @@ div.imgBg{
     padding: .5rem .75rem;
     border-radius: 1rem;
 }
+
 /* CONTACT */
+.contact-container>p{
+    color: var(--khaki);
+    width: 45%;
+}
 .contact-container,footer {
     padding: 6rem;
     align-items: center;
@@ -479,7 +491,16 @@ textarea::placeholder {
       display: initial;
     }
   }
-  
+  @media (min-width: 1075px) and (max-width: 1350px) {
+    .contact-container>p{
+        width: 60%;
+    }
+}
+  @media (min-width: 901px) and (max-width:1074px) {
+    .contact-container>p{
+        width: 79%;
+    }
+}
   @media screen and (min-width: 901px) {
     #desktop {
       display: initial;
@@ -522,20 +543,20 @@ textarea::placeholder {
 
 
 @media screen and (min-width: 923px) {
-    div.imgBg{
+    /* div.imgBg{
         top: 2265px;
-    }
+    } */
 }
 @media screen and (min-width: 1015px) {
-    div.imgBg{
+    /* div.imgBg{
         top: 2250px;
     }
+*/
 }
-@media screen and (min-width: 1127px) {
-    div.imgBg{
-        top: 2236px;
+
+/* @media screen and (max-width: 1070px) {
+    .contact-container>p{
+        width: 80%;
+
     }
-    .mission .half{
-        width: 27rem;
-    }
-}
+} */
