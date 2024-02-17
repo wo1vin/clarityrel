@@ -19,12 +19,6 @@
     <header>
         <nav>
             <img id="logo" src="styling/logo.svg" />
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html/#aboutD">About Us</a></li>
-                <li><a href="index.html/#offeringsD">Services</a></li>
-                <li><a href="index.html/#contactD">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -33,25 +27,30 @@
 
         <div class="frameContainer"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTluTDlb-Bm0OcUtNxDJ46Pv9A_ch9ab8v0XdK2vyBEKq2XQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 
-        <section class="product">
-            <div class="price">
-                <h4>Master Class</h4>
-                <p >$149</p>
-            </div>
-            <button id="addProduct1" class="priceBtn button-42" role="button">Add to cart</button>
-        </section>
-        <section class="product">
-            <div  class="price">
-                <h4>Private Session</h4>
-                <p>$299</p>
-            </div>
-            <button id="addProduct2" class="priceBtn button-42" role="button">Add to cart</button>
-        </section>
+        <div class="productContainer">
+            <section class="product">
+                <div class="price">
+                    <p>Master Class</p>
+                    <p >$149</p>
+                </div>
+                <button id="addProduct1" class="priceBtn button-42" role="button">Add to cart</button>
+            </section>
+            <section class="product">
+                <div  class="price">
+                    <p>Private Session</p>
+                    <p>$299</p>
+                </div>
+                <button id="addProduct2" class="priceBtn button-42" role="button">Add to cart</button>
+            </section>
+        </div>
 
         <div class="priceBtn"> 
-            <button id="checkoutBtn" class="button-42" role="button">Checkout</button>
+            <button id="buyBtn" class="button-42" role="button">Purchase</button>
             <p class="advise">Please use the same email for both the registration and the checkout process.</p>
+            <button id="checkoutBtn" class="button-42" role="button">Checkout with Stripe</button>
         </div>
+
+        <a href="index.html">Back to home page</a>
     </section>
 
     <div id="checkout">

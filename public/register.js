@@ -9,6 +9,23 @@ function myFunction() {
     }
   }
 
+// Show product menu
+const buyBtn = document.querySelector('#buyBtn');
+const checkoutBtn = document.querySelector('#checkoutBtn');
+const itemMenu = document.querySelector('.productContainer');
+const form = document.querySelector('.frameContainer');
+const advice = document.querySelector('.advice');
+const title = document.querySelector('h1');
+
+buyBtn.addEventListener('click', function(){
+    itemMenu.style.display = 'block';
+    checkoutBtn.style.display = 'inline-block';
+    buyBtn.style.display = 'none';
+    form.style.display = 'none';
+    advice.style.display = 'block';
+    title.innerText.value = 'Checkout';
+})
+
 // PRODUCT MENU / CART
 let items = []
 const product1 = document.querySelector('#addProduct1');
@@ -20,23 +37,23 @@ product1.addEventListener('click', addClassToCart);
 product2.addEventListener('click', addSessionToCart);
 
 function addClassToCart () {
-  if(product1.innerText === "Remove from cart"){
+  if(product1.innerText === "Remove"){
     product1.innerText = "Add to cart";
     items.splice(0,1);
     console.log(items,"Masterclass removed from cart.");
   } else {
-    product1.innerText = "Remove from cart";
+    product1.innerText = "Remove";
     items.splice(0,0,{ id: 1, quantity: 1 })
     console.log(items,"Masterclass added to cart.");
   }
 }
 function addSessionToCart(){
-  if(product2.innerText === "Remove from cart"){
+  if(product2.innerText === "Remove"){
     product2.innerText = "Add to cart";
     items.splice(1,1);
     console.log(items,"Private session removed from cart.");
   } else {
-    product2.innerText = "Remove from cart";
+    product2.innerText = "Remove";
     items.splice(1,0,{ id: 2, quantity: 1 });
     console.log(items,"Private session added to cart.");
   }
@@ -45,7 +62,6 @@ function addSessionToCart(){
 // CHECKOUT
 
 // const button = document.querySelector('#checkout');
-const checkoutBtn = document.querySelector('#checkoutBtn');
 
 // checkoutBtn.addEventListener('click',function(){
 //   console.log('click',items);
