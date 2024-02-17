@@ -15,15 +15,15 @@ const checkoutBtn = document.querySelector('#checkoutBtn');
 const itemMenu = document.querySelector('.productContainer');
 const form = document.querySelector('.frameContainer');
 const advice = document.querySelector('.advice');
-const title = document.querySelector('h1');
+const title = document.querySelector('#title');
 
 buyBtn.addEventListener('click', function(){
+    title.innerText = 'Checkout';
     itemMenu.style.display = 'block';
     checkoutBtn.style.display = 'inline-block';
     buyBtn.style.display = 'none';
     form.style.display = 'none';
-    advice.style.display = 'block';
-    title.innerText.value = 'Checkout';
+    // advice.style.display = 'block';
 })
 
 // PRODUCT MENU / CART

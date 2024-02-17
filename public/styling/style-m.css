@@ -352,7 +352,7 @@ body.registration{
     width: 100vw;
 }
 .registration .reg a{
-    margin: 2rem 0 0 0;
+    /* margin: 2rem 0 0 0; */
     color: gray;
     text-align: center;
 }
@@ -397,30 +397,32 @@ body.registration{
     z-index: -1; */
 }
 #buyBtn{
-    display: none;
+    /* display: none; */
+    margin: 1rem;
 }
 
 /* comment out */
-.frameContainer{
+/* .frameContainer{
     display: none;
-}
+} */
 .reg{
-    height: 40vh;
+    height: 70vh;
     justify-content: space-between;
 }
-/* .productContainer{
-    margin-top:;
-} */
+.productContainer{
+    display: none;
+}
 .registration p.advise{
     color: rgb(119, 119, 119);
     padding: 0 2rem;
     margin: 0 0 .5rem 0;
 }
 
-.registration #checkoutBtnM{
+.registration #checkoutBtn{
     background-color: var(--green);
     color: var(--khaki);
-    width: 7rem;
+    display: none;
+    /* width: 7rem; */
 }
 .registration footer{
     padding: .5rem 0;
