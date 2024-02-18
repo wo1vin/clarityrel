@@ -78,43 +78,58 @@ a{
 /* Hide the links inside the navigation menu (except for logo/home) */
 #navLinks {
   display: none;
-  padding: 0;
-  margin: 0;
+
 }
 #navLinks li{
-    width: 30vw;
-    background-color: #0a2a2ea3;
-    padding: 0;
-    text-align: center;
+    width: 100%;
+    /* width: 30vw; */
+   padding: 0;
+    /* text-align: center;
     position: absolute;
     right: 0px;
-    z-index: 0;
+    z-index: 0; */
     border-radius: 0;
 }
-.link0{
-    top: 47px;
+#navLinks li a{
+    /* text-align: center; */
+    /* width: 100%; */
+    display: block;
+
+}
+/* .link0{
+    top: 45px;
 }
 .link1{
-    top: 141px;
+    top: 135px;
 }
 .link2{
-    top: 94px;
+    top: 90px;
 }
 .link3{
-    top: 188px;
-}
+    top: 180px;
+} */
 /* Style navigation menu links */
+#mobile nav{
+    text-align: right;
+    position: fixed;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: max-content; 
+}
 nav a {
-    
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
+    /* text-align: center; */
+    padding: 1rem 1.5rem;
+    /* text-decoration: none; */
+    font-size: 2rem;
+    /* display: block;  */
   }
   
   /* Style the hamburger menu */
 nav a.icon {
-    position: sticky;
+    /* position: sticky;
+    text-align: right; */
   }
   
   /* Add a grey background color on mouse-over */
@@ -122,7 +137,10 @@ nav a:hover {
     background-color: #0a2a2ea3;
     color: var(--lilac);
   }
-  
+#mobile ul{
+    margin: 0;
+    padding: 0;
+}
   /* Style the active link (or home/logo) */
   /* .active {
     background-color: #04AA6D;
@@ -134,11 +152,12 @@ header, .signUp{
     flex-direction: column;
     align-items: center;
 }
-#logo {
-    width: 10rem;
+#logo{
+    width: 8rem;
+    padding: 2rem 0 0 0;
 }
 ul {
-    height: min-content;
+    /* height: min-content; */
     list-style: none;
 }
 li {
@@ -149,25 +168,31 @@ li {
 
 /* INTRO */
 #intro, .mission,#about{
-    padding: 2rem;
+    padding: 3rem 2rem;
     /* padding: 3rem; */
     display: flex;
+    overflow: clip;
     flex-direction: column;
     align-items: flex-start;
 }
 .photo{
-    width: 100%;
+    width: 125%;
     /* margin: -3rem 0 -9rem 1.5rem; */
     /* margin: 0 0 -5rem 0; */
-    /* position: relative; */
-    /* left: 24px; */
+    position: relative;
+    left: -13%;
     z-index: -1;
 }
 .intro-img{
-    margin: -8rem 0;
+    /* overflow: hidden; */
+
+    margin: -4rem 0 0 0;
+    height: 55vh;
+    /* margin: -4rem 0 -5.5rem 0; */
 }
 #intro p{
-    margin: 0 0 .5rem 0;
+    margin: .5rem 0;
+    font-size: .9rem;
 }
 .signUp{
     width: 100%;
@@ -264,7 +289,7 @@ li {
       color: var(--khaki);
       background-color:  var(--darkgreen);
   }
-  #offerings .button-42{
+  #offerings .button-42, .homeBtn{
       color: var(--khaki);
       background-color: var(--green);
       z-index: 0;
@@ -283,10 +308,13 @@ li {
       color: var(--khaki);
   }
   
+  .homeBtn{
+    margin: 1rem auto;
+  }
 
 /* OFFERINGS */
 #offerings{
-    padding: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     background-color: var(--darkgreen);
     background: linear-gradient(0deg, rgba(2,20,22,1) 0%,rgba(12,49,48,1) 10%, rgba(10,42,46,1) 90%, rgba(2,20,22,1) 100%);
     /* padding: 2.5rem 1rem; */
@@ -317,12 +345,16 @@ li {
     display: flex;
     flex-direction: column;
 } */
+
 .product{
     width: 100%;
     padding: .5rem 0;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
+}
+.registration .product{
+    flex-direction: row;
 }
 .product>p{
     width: 85%;
@@ -344,8 +376,15 @@ div.priceBtn{
 .advise{
     text-align: center;
 }
-
-
+.wedContainer{
+    /* overflow: visible; */
+}
+.wed{
+    width: 150%;
+    /* position: relative; */
+    left: -50%;
+    margin: -4rem 0 0 0;
+}
 /* RGISTRATION */
 body.registration{
     height: 100vh;
@@ -364,10 +403,7 @@ body.registration{
     flex-direction: column;
     align-items: center;
 }
-#logo{
-    width: 8rem;
-    padding: .5rem 0;
-}
+
 .registration h1{
     margin: 0;
     font-size: 2rem;
@@ -435,7 +471,7 @@ body.registration{
     color: var(--khaki);
 }
 .contact-container,footer {
-    padding: 3rem;
+    padding: 1rem;
     background: rgb(12, 49, 48);
     color: rgb(243, 204, 131);
     display: flex;
@@ -511,9 +547,9 @@ textarea::placeholder {
   color: var(--foreground-light);
 }
 
-.intro-img .photo.wed{
+/* .intro-img .photo.wed{
     margin: -10rem 0 -6rem 0;
-}
+} */
 #first, #last, #phone, #email, #subject {
   height: 2.5rem;
 }
@@ -667,12 +703,12 @@ footer{
       display: none;
     }
   }
-  @media screen and (max-width: 800px) {
+  /* @media screen and (max-width: 800px) {
     .intro-img .photo.wed{
         margin: -8rem 0 -4rem 0;
     }
-  }
-  @media screen and (max-width: 700px) {
+  } */
+  /* @media screen and (max-width: 700px) {
     .intro-img .photo.wed{
         margin: -6rem 0 -3rem 0;
     }
@@ -686,4 +722,4 @@ footer{
     .intro-img .photo.wed{
         margin: -1rem 0 0 0;
     }
-  }
+  } */

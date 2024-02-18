@@ -5,6 +5,7 @@ function myFunction() {
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
+      x.style.backgroundColor = '#0a2a2ea3';
       x.style.display = "block";
     }
   }
@@ -23,7 +24,6 @@ buyBtn.addEventListener('click', function(){
     checkoutBtn.style.display = 'inline-block';
     buyBtn.style.display = 'none';
     form.style.display = 'none';
-    // advice.style.display = 'block';
 })
 
 // PRODUCT MENU / CART
