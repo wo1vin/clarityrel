@@ -19,11 +19,12 @@ const advice = document.querySelector('.advice');
 const title = document.querySelector('#title');
 
 buyBtn.addEventListener('click', function(){
+  checkoutBtn.style.display = 'inline-block';
+  buyBtn.style.display = 'none';
+  form.style.display = 'none';
     title.innerText = 'Checkout';
     itemMenu.style.display = 'block';
-    checkoutBtn.style.display = 'inline-block';
-    buyBtn.style.display = 'none';
-    form.style.display = 'none';
+    advice.style.display = 'block';
 })
 
 // PRODUCT MENU / CART

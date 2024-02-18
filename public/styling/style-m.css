@@ -442,13 +442,14 @@ body.registration{
     display: none;
 } */
 .reg{
-    height: 70vh;
+    height: 66vh;
     justify-content: space-between;
 }
 .productContainer{
     display: none;
 }
 .registration p.advise{
+    display: none;
     color: rgb(119, 119, 119);
     padding: 0 2rem;
     margin: 0 0 .5rem 0;
