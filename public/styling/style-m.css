@@ -19,7 +19,7 @@ body{
 /* TEXT */
 h1,h2,h4{
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.25rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
@@ -48,9 +48,9 @@ p,h5{
     font-family: 'Comfortaa', sans-serif;
 }
 h5{
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    margin: 2rem;
+    margin: 2rem 2rem 0 2rem;
     text-align: center;
 }
 a{
@@ -61,20 +61,22 @@ a{
 }
 
 /* navigation menu */
-#navMobile{
+nav.horizontal{
+    display: none;
+}
+/* #navMobile{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: sticky;
   top: 0px;
-}
+} */
 .icon{
     color: grey;
 }
 /* Hide the links inside the navigation menu (except for logo/home) */
 #navLinks {
   display: none;
-
 }
 #navLinks li{
     width: 100%;
@@ -84,7 +86,7 @@ a{
 #navLinks li a{
     display: block;
 }
-#mobile nav{
+#mobile nav#mobileNav{
     text-align: right;
     position: fixed;
     right: 0px;
@@ -95,7 +97,7 @@ a{
 }
 nav a {
     padding: 1rem 1.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   /* Style the hamburger menu */
@@ -138,23 +140,31 @@ li {
 .photo{
     width: 125%;
     position: relative;
-    left: -13%;
+    left: -12%;
+    top: 0;
     z-index: -1;
+    margin: -4rem 0;
 }
 .intro-img{
-    margin: -4rem 0 0 0;
-    height: 55vh;
+    /* margin: -4rem 0 0 0;
+    height: 55vh; */
+    z-index: -2;
 }
+
 #intro p{
     margin: .5rem 0;
     font-size: .9rem;
+}
+#signupBtn{
+    margin: 0 0 .75rem 0;
 }
 .signUp{
     width: 100%;
     margin: 2rem 0 0 0;
 }
-.signUp p{
+#intro .signUp p{
     text-align: center;
+    margin: 0;
 }
 .advise{
     color: var(--khaki);
@@ -278,7 +288,7 @@ li {
     margin: 2rem 0 1rem 0;
 }
 .price{
-    margin: 0 .45rem 0 0;
+    /* margin: 0 .45rem 0 0; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -291,7 +301,7 @@ li {
     width: max-content;
     display: inline;
     margin: 0 .45rem;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .product{
     width: 100%;
@@ -325,7 +335,7 @@ div.priceBtn{
 .wed{
     width: 150%;
     left: -50%;
-    margin: -4rem 0 0 0;
+    margin: -8rem 0;
 }
 /* RGISTRATION */
 body.registration{
@@ -408,8 +418,11 @@ footer, footer a{
     width: var(--viewport-width);
 }
 footer a:hover{
-    border-radius: 1.5rem;
+    border-radius: 1.75rem;
 }
+
+
+
 @media (min-height: 800px) {
     .registration .frameContainer {
         margin-top: -40vh;
@@ -419,11 +432,30 @@ footer a:hover{
 @media (min-height: 1000px) {
     #logo{
         padding-top: 1rem;
+        width: 12rem;
+    }
+    h1{
+        font-size: 3rem;
     }
     nav{
         align-items: center;
     }
-
+    h4{
+        font-size: 1.5rem;
+    }
+    .button-42{
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+    }
+    .intro-img{
+        margin: auto;
+        /* width: 80%;
+        margin: -7rem 0 2rem 0 */
+    }
+    .priceBtn{
+        margin: 0 0 1rem 0;
+    }
     .registration .frameContainer {
         margin-top: -45vh;
         padding-top: 45vh;
@@ -432,13 +464,58 @@ footer a:hover{
     .registration h1{
         padding: 2rem 0;
     }
+    .signUp{
+        margin: 0;
+    }
+}
+
+@media (min-width: 400px) {
+    /* .intro-img{
+        margin: -4rem 0 -4rem 0;
+    } */
+    .img1{
+        left: -12%;
+    }
 }
 @media (min-width: 500px) {
+    #intro, .mission, #about {
+        padding: 3rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #mobile nav#mobileNav{
+        display: none;
+    }
+    .signUp p{
+        /* padding: 0 3rem; */
+        /* width: 60%; */
+    }
+    .photo{
+        width: 100%;
+        left: 0;
+    }
+    /* .intro-img{
+        margin: -4rem 0 7rem 0;
+    } */
+    .product>p{
+        width: 65%;
+    }
+    .wedContainer{
+        margin-bottom: -2rem;
+    }
+    h5{
+        margin: 0;
+        padding: 0 3rem;
+    }
+    nav.horizontal a{
+        font-size: 1.25rem;
+    }
     nav.horizontal{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 1rem 0;
+        margin: 1.5rem 0;
     }
     nav.horizontal ul{
         margin: 0;
@@ -448,7 +525,255 @@ footer a:hover{
     nav.horizontal a, nav.horizontal li{
         color: gray;
         display: inline;
-    };
+    }
+    nav.horizontal a:hover, nav.horizontal li:hover{
+        color: var(--khaki);
+        border-radius: 1.75rem;
+    }
+    .price{
+        width: 66%;
+        justify-content: space-between;
+        padding: .7rem 1rem;
+    }
+}
+@media (min-width: 700px) {
+    .photo{
+        width: 75%;
+        left: 12.5%;
+        /* margin: -6rem 0 -8rem 0; */
+    }
+    .wed{
+        width: 100%;
+        left: 0;
+        margin: -15rem 0 -10rem 0;
+    }
+    #intro, .mission, #about {
+        padding: 3rem 5rem;
+    }
+    .signUp p{
+        /* padding: 0 7rem; */
+        /* width: 60%; */
+    }
+  }
+@media (min-width: 900px) {
+    #intro  p, .mission p,#offerings p,#about p,h5{
+        font-size: 1.3rem;
+    }
+    #intro, .mission, #about {
+        padding: 5rem 7rem;
+    }
+    #offerings{
+        padding: 5rem;
+    }
+    .photo {
+        width: 85%;
+        left: 8.5%;
+    }
+    .wed {
+        width: 100%;
+        left: 0;
+    }
+}
+@media (min-height: 1100px) or (min-width: 1000px) {
+    #logo{
+        padding-top: 1rem;
+        width: 12rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    nav{
+        align-items: center;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+    .button-42{
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+    }
+    .intro-img{
+        margin: auto;
+        /* width: 80%;
+        margin: -7rem 0 2rem 0 */
+    }
+    .priceBtn{
+        margin: 0 0 1rem 0;
+    }
+    .registration .frameContainer {
+        margin-top: -45vh;
+        padding-top: 45vh;
+        padding-bottom: 2rem;
+    }
+    .registration h1{
+        padding: 2rem 0;
+    }
+    .signUp{
+        margin: 0;
+    }
+    #logo{
+        padding-top: 3rem;
+        width: 15rem;
+    }
+
+    nav.horizontal a{
+        font-size: 1.75rem;
+    }
+    #intro  p, .mission p, #offerings p, #about p, h5 ,footer a{
+        font-size: 1.75rem;
+    }
+    h5 {
+        margin: 0;
+        padding: 0 8rem;
+    }
+    #intro, .mission, #about{
+        padding: 5rem 10rem;
+    }
+    .photo{
+        margin: -4rem 0 -7rem 0;
+    }
+    .wed{
+        margin: -21rem 0 -14rem 0;
+    }
+}
+@media (min-height: 600px) and (min-width: 1000px) {
+    
+    #logo{
+        padding-top: 1rem;
+        width: 12rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #offerings h1{
+        font-size: 2.5rem;
+    }
+    nav.horizontal a,h5 {
+        font-size: 1.25rem;
+    }
+    #intro  p, .mission p, #offerings p, #about p, h5, footer a{
+        font-size: 1rem;
+    }
+    .button-42{
+        font-size: 1.2rem;
+    }
+    .price{
+        border-radius: 1.5rem;
+    }
+    #intro>section, .mission .half,.mission .intro-img{
+        width: 45%;
+        margin: 0;
+    }
+    #intro, .mission, #about {
+        padding: 3rem;
+    }
+    #about {
+        width: 60%;
+        margin: auto;
+        padding: 5rem 3rem;
+    }
+    #intro,.mission{
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    .mission{
+        flex-direction: row;
+    }
+    #intro .half, .mission .half{
+        margin: 1rem 0 0 0;
+    }
+    .intro-img{
+        margin: -2rem 0 2rem 0;
+    }
+    .photo {
+        width: 100%;
+        left: 1.5%;
+    }
+    .wedContainer{
+        margin: 5rem 0 2rem 0;
+    }
+    
+    #signupBtn{
+        font-size: 1rem;
+    }
+}
+@media (min-height: 1300px){
+    #intro  p, .mission p, #offerings p, #about p, footer a{
+        font-size: 1.25rem;
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+    .wed {
+        margin: -15rem 0 -12rem 0;
+    }
+}
+@media (min-width: 1280px) {
+    #intro>section, .mission .half, .mission .intro-img {
+        width: 35%;
+        /* margin: 0; */
+    }
+    /* .mission .intro-img{
+        margin: -3rem 0 0 0;
+    } */
+    .product {
+        width: 62%;
+    }
+    #about {
+        width: 50%;
+    }
+}
+@media (min-width: 1400px) {
+    #intro>section, .mission .half{
+        width: 30%;
+        padding: 0 2rem;
+    }
+    .product {
+        width: 55%;
+    }
+    #about {
+        width: 40%;
+    }
+}
+@media (min-width: 1700px) {
+    #intro>section, .mission .half{
+        width: 25%;
+        padding: 0 2rem;
+    }
+
+    .product {
+        width: 50%;
+    }
+    #about {
+        width: 40%;
+    }
+    .mission .photo{
+        margin: -9rem 0 -7rem -5rem;
+    }
+}
+@media (min-width: 2000px) {
+    /* #intro>section, .mission .half{
+        width: 25%;
+        padding: 0 2rem;
+    } */
+    #intro .half, .mission .half {
+        margin: 4rem 0 0 0;
+    }
+    .product {
+        width: 50%;
+    }
+    .wed{
+        /* margin: -20rem 0 -14rem 0; */
+        width: 80%;
+        left: 20%;
+    }
+    /* #about {
+        width: 40%;
+    }
+    .mission .photo{
+        margin: -9rem 0 -7rem -5rem;
+    } */
 }
 
 /* Animation */
@@ -457,42 +782,28 @@ footer a:hover{
     to {top: 0; opacity: 1}
   }
 
-  @media screen and (min-width: 500px) {
+  /* @media screen and (min-width: 500px) {
     #offerings{
         padding: 2rem;
     }
-  }
+  } */
 
-  @media screen and (min-width: 600px) {
-    .product>p{
-        width: 65%;
+  /* @media screen and (max-width: 1000px) {
+    #introD{
+        display: none;
+    }
+    #intro{
+        display: initial;
     }
   }
-  @media screen and (min-width: 700px) {
-    /* .photo{
-        margin: -6rem 0 -8rem 0;
-    } */
-    #intro, .mission, #about {
-        padding: 3rem;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    #desktop {
-      display: none;
-    }
-    #mobile {
+  @media screen and (min-width: 1001px) {
+    #introD{
       display: initial;
     }
-  }
-  
-  @media screen and (min-width: 901px) {
-    #desktop {
-      display: initial;
-    }
-    #mobile {
+    #intro {
       display: none;
     }
-  }
+  } */
   /* @media screen and (max-width: 800px) {
     .intro-img .photo.wed{
         margin: -8rem 0 -4rem 0;
