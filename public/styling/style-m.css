@@ -548,13 +548,19 @@ footer a:hover{
         color: var(--khaki);
         border-radius: 1.75rem;
     }
-    .price{
+    #offerings .price{
         width: 66%;
         justify-content: space-between;
         padding: .7rem 1rem;
     }
 }
 @media (min-width: 700px) {
+    .registration .price{
+        padding: .5rem;
+    }
+    .registration .priceBtn{
+        padding: 1rem;
+    }
     .photo{
         width: 75%;
         left: 12.5%;
@@ -738,7 +744,7 @@ footer a:hover{
     /* .mission .intro-img{
         margin: -3rem 0 0 0;
     } */
-    .product {
+    #offerings .product {
         width: 62%;
     }
     #about {
@@ -756,7 +762,7 @@ footer a:hover{
         width: 30%;
         padding: 0 2rem;
     }
-    .product {
+    #offerings .product {
         width: 55%;
     }
     #about {
@@ -771,7 +777,7 @@ footer a:hover{
     .disclaimer{
         max-width: 35%
     }
-    .product {
+    #offerings .product {
         width: 50%;
     }
     #about {
@@ -789,7 +795,7 @@ footer a:hover{
     #intro .half, .mission .half {
         margin: 4rem 0 0 0;
     }
-    .product {
+    #offerings .product {
         width: 50%;
     }
     .wed{
