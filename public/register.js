@@ -24,7 +24,6 @@ buyBtn.addEventListener('click', function(){
   form.style.display = 'none';
     title.innerText = 'Checkout';
     itemMenu.style.display = 'block';
-    advice.style.display = 'block';
 })
 
 // PRODUCT MENU / CART

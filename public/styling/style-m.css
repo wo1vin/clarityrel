@@ -294,13 +294,18 @@ li {
     align-items: center;
     width: 85%;
     background-color: var(--green);
+    border-radius: 1.5rem;
+}
+#offerings .price{
     padding: 0.5rem 0.75rem;
-    border-radius: 1rem;
 }
 .price p{
     width: max-content;
     display: inline;
     margin: 0 .45rem;
+    font-size: 1rem;
+}
+#registerBtn{
     font-size: 1rem;
 }
 .product{
@@ -310,10 +315,25 @@ li {
     flex-direction: column;
     align-items: center;
 }
+.registration .disclaimer{
+    font-size: .8rem;
+}
 .registration .product{
     flex-direction: row;
+    /* width: max-content; */
 }
-.product>p{
+.registration .price p,.registration .priceBtn{
+    margin: 0;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    /* margin: 0 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem; */
+}
+/* .registration .priceBtn{
+    padding: 0;
+} */
+.product>p, .disclaimer{
     width: 85%;
 }
 div.priceBtn{
@@ -342,15 +362,20 @@ body.registration{
     height: 100vh;
     width: 100vw;
 }
-.registration .reg a{
-    color: gray;
+.registration .reg a,.registration #buyBtn,#checkoutBtn{
+    font-size: 1rem;
+    color: var(--khaki);
+    background-color: var(--green);
     text-align: center;
+    margin: .5rem;
 }
 .reg{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
+    height: 80vh;
+    justify-content: space-between;
 }
 
 .registration h1{
@@ -377,12 +402,8 @@ body.registration{
 #buyBtn{
     margin: 1rem;
 }
-
-.reg{
-    height: 66vh;
-    justify-content: space-between;
-}
 .productContainer{
+
     display: none;
 }
 .registration p.advise{
@@ -391,7 +412,9 @@ body.registration{
     padding: 0 2rem;
     margin: 0 0 .5rem 0;
 }
-
+.registration .price{
+    margin: 0 .5rem;
+}
 .registration #checkoutBtn{
     background-color: var(--green);
     color: var(--khaki);
@@ -400,8 +423,8 @@ body.registration{
 .registration footer{
     padding: .5rem 0;
     width: 100%;
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute;
+    bottom: 0px; */
 }
 /* CONTACT */
 .contact-container>p{
@@ -445,7 +468,6 @@ footer a:hover{
     }
     .button-42{
         padding: 1rem 2rem;
-        font-size: 1.5rem;
         border-radius: 2rem;
     }
     .intro-img{
@@ -486,10 +508,6 @@ footer a:hover{
     }
     #mobile nav#mobileNav{
         display: none;
-    }
-    .signUp p{
-        /* padding: 0 3rem; */
-        /* width: 60%; */
     }
     .photo{
         width: 100%;
@@ -540,7 +558,6 @@ footer a:hover{
     .photo{
         width: 75%;
         left: 12.5%;
-        /* margin: -6rem 0 -8rem 0; */
     }
     .wed{
         width: 100%;
@@ -550,10 +567,10 @@ footer a:hover{
     #intro, .mission, #about {
         padding: 3rem 5rem;
     }
-    .signUp p{
-        /* padding: 0 7rem; */
-        /* width: 60%; */
+    .disclaimer{
+        width: 65%;
     }
+
   }
 @media (min-width: 900px) {
     #intro  p, .mission p,#offerings p,#about p,h5{
@@ -588,9 +605,9 @@ footer a:hover{
     h4{
         font-size: 1.5rem;
     }
-    .button-42{
+    .button-42,footer a,footer a:hover{
         padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         border-radius: 2rem;
     }
     .intro-img{
@@ -636,6 +653,10 @@ footer a:hover{
     .wed{
         margin: -21rem 0 -14rem 0;
     }
+    .disclaimer{
+        width: 54%;
+    }
+
 }
 @media (min-height: 600px) and (min-width: 1000px) {
     
@@ -681,7 +702,7 @@ footer a:hover{
         flex-direction: row;
     }
     #intro .half, .mission .half{
-        margin: 1rem 0 0 0;
+        margin: 2rem 0 0 0;
     }
     .intro-img{
         margin: -2rem 0 2rem 0;
@@ -723,6 +744,12 @@ footer a:hover{
     #about {
         width: 50%;
     }
+    .disclaimer{
+        max-width: 50%
+    }
+    .button-42 {
+        font-size: 1rem;
+    }
 }
 @media (min-width: 1400px) {
     #intro>section, .mission .half{
@@ -741,7 +768,9 @@ footer a:hover{
         width: 25%;
         padding: 0 2rem;
     }
-
+    .disclaimer{
+        max-width: 35%
+    }
     .product {
         width: 50%;
     }
