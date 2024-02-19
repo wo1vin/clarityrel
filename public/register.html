@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Relationships</title>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="register.js" type="text/javascript" defer ></script>
+
+    <link rel="stylesheet" href="styling/style-m.css" /> 
+    <!-- <link rel="stylesheet" href="styling/style-d.css" media="screen and (min-width:901px)"/>  -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="registration">
+    <header>
+        <nav>
+            <img id="logo" src="styling/logo.svg" />
+        </nav>
+    </header>
+
+    <section class="reg">
+        <h1 id="title">Register</h1>
+
+        <div class="frameContainer"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTluTDlb-Bm0OcUtNxDJ46Pv9A_ch9ab8v0XdK2vyBEKq2XQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+
+        <div class="productContainer">
+            <section class="product">
+                <div class="price">
+                    <p>Master Class</p>
+                    <p >$149</p>
+                </div>
+                <button id="addProduct1" class="priceBtn button-42" role="button">Add to cart</button>
+            </section>
+            <section class="product">
+                <div  class="price">
+                    <p>Private Session</p>
+                    <p>$299</p>
+                </div>
+                <button id="addProduct2" class="priceBtn button-42" role="button">Add to cart</button>
+            </section>
+        </div>
+
+        <p class="disclaimer">Disclaimer: Please note services rendered are practical in application. While much of the content is informed by therapeutic knowledge, services rendered through Clarity Relationships is not therapy. Referrals to other providers will be provided to participants needing support with their emotional health needs.</p>
+
+        <div class="priceBtn"> 
+            <button id="buyBtn" class="button-42" role="button">Purchase</button>
+            <p class="advise">Please use the same email for both the registration and the checkout process.</p>
+            <button id="checkoutBtn" class="button-42" role="button">Checkout with Stripe</button>
+            <a class="button-42" href="index.html">Back to home page</a>
+        </div>
+
+        
+
+    </section>
+
+    <div id="checkout">
+        <!-- Checkout will insert the payment form here -->
+    </div>
+<!-- 
+    <footer>
+        <a href="https://wo1vin.github.io/Portfolio/">&copy; Del Monte</a>
+    </footer> -->
+</body>
+</html>

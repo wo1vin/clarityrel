@@ -15,8 +15,8 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 app.use(
     cors({
-      //origin: "https://localhost:3000",
-      origin: "https://clarityrelationships.com/",
+      origin: process.env.SERVER_URL,
+    //   origin: "https://clarityrelationships.com/",
     })
 )
 
@@ -57,10 +57,10 @@ app.post('/create-checkout-session', async (req,res) => {
                     quantity: item.quantity,
                 }
             }),
-            success_url: `https://clarityrelationships.com/success.html`,
-            cancel_url: `https://clarityrelationships.com/cancel.html` 
-            // success_url: `${process.env.SERVER_URL}/success.html`,
-            // cancel_url: `${process.env.SERVER_URL}/cancel.html` 
+            // success_url: `https://clarityrelationships.com/success.html`,
+            // cancel_url: `https://clarityrelationships.com/cancel.html` 
+            success_url: `${process.env.SERVER_URL}/success.html`,
+            cancel_url: `${process.env.SERVER_URL}/cancel.html` 
         })
         console.log("await",req,res)
         res.json({ url: session.url })
@@ -70,8 +70,11 @@ app.post('/create-checkout-session', async (req,res) => {
 })
 
 
+app.get('/register', (req,res)=>{ 
+    res.sendFile(__dirname + '/public/register.html');
+})
 app.get('/', (req,res)=>{ 
-    res.render('index')
+    res.render('index');
 })
 
 //Server Running

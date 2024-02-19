@@ -321,6 +321,16 @@ div.imgBg{
     border-radius: 1rem;
 }
 
+.reg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.reg h1{
+    margin: 0 0 2rem 0;
+}
+
 /* CONTACT */
 .contact-container>p{
     color: var(--khaki);
