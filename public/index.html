@@ -17,13 +17,14 @@
 <body>
     <div id="mobile">
     <nav id="mobileNav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="useNav()">
             <i class="fa fa-bars"></i>
         </a>
         <ul id="navLinks">
             <li ><a class="link" href="#logo">Home</a></li>
             <li ><a class="link" href="#about">About Us</a></li>
             <li><a class="link" href="#offerings">Services</a></li>
+            <li><a class="link" id="contactBtn">Contact</a></li>
         </ul>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         
@@ -35,9 +36,18 @@
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#offerings">Services</a></li>
+                <li><a id="contactBtn">Contact</a></li>
             </ul>
         </nav>
-
+        
+        <!-- color #004c44-->
+        <div id="contactModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span class="contactClose close">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVosGVK6wgzr09OYEAxdSXxdzNKBbmYDGLpu5A-ia9Mtvekg/viewform?embedded=true" width="640" height="1454" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
         <h5>Learn to master Intentional Dating in today's modern culture.</h5>
     </header>
 
@@ -54,7 +64,7 @@
             </div>
 
             <div class="signUp">
-                <a id="signupBtn" class="button-42">FREE Tool
+                <a id="signupBtn" data-id="signup" class="button-42">FREE Tool
                 </a>
                 <p>Click to receive your free assessment:</p> <p>"Barriers to Intentional Relationships."</p>
             </div>
@@ -91,13 +101,6 @@
                 <p>Intentional Dating Essentials</p>
                 <p>March 30th, 2024 - 1:00 p.m. CST / 2:00 p.m. EST / 11:00 a.m. PST</p>
 
-                <div id="registerModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                      <span class="registerClose close">&times;</span>
-                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScTluTDlb-Bm0OcUtNxDJ46Pv9A_ch9ab8v0XdK2vyBEKq2XQ/viewform?embedded=true" width="400px" height="1000px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                </div>
             </section>
             <section class="product">
                 <div  class="price">

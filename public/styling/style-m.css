@@ -128,7 +128,6 @@ li {
     border-radius: 1rem;
 }
 
-
 /* INTRO */
 #intro, .mission,#about{
     padding: 3rem 2rem;
@@ -172,10 +171,7 @@ li {
 
 /* MODAL */
 /* The Modal (background) */
-#signupModal {
-    display: none; 
-}
-#registerModal {
+#signupModal,#contactModal {
     display: none; 
 }
 .modal {
@@ -244,7 +240,7 @@ li {
     -webkit-user-select: none;
     vertical-align: top;
     white-space: nowrap;
-    z-index: 9;
+    z-index: 1;
     border: 0;
     transition: box-shadow .2s;
   }
