@@ -25,6 +25,7 @@ const contactModal = document.getElementById("contactModal");
 
 // Get the button that opens the modal
 const signupBtn = document.getElementById("signupBtn");
+const subscribeBtn = document.getElementById("subscribeBtn");
 const contactBtn = document.getElementById("contactBtn");
 const contactBtnM = document.getElementById("contactBtnM");
 
@@ -34,6 +35,7 @@ const contactSpan = document.getElementsByClassName("contactClose")[0];
 
 // When the user clicks on the button, open the modal
 signupBtn.addEventListener('click', signupToggle);
+subscribeBtn.addEventListener('click', signupToggle);
 contactBtn.addEventListener('click', contactToggle);
 contactBtnM.addEventListener('click', contactToggle);
 
@@ -47,9 +49,6 @@ function contactToggle (){
     contactBtn.style.zIndex = "0";
 }
 // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
 signupSpan.onclick = function() {
   signupModal.style.display = "none";
 }

@@ -94,6 +94,7 @@ nav.horizontal{
     flex-direction: column;
     align-items: flex-end;
     width: max-content; 
+    z-index: 3;
 }
 nav a {
     padding: 1rem 1.5rem;
@@ -303,7 +304,7 @@ li {
 }
 #registerBtn,#subscribeBtn{
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .product{
     width: 100%;
@@ -311,6 +312,12 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.product:last-child p{
+    margin: 0;
+}
+#subscribeBtn{
+    margin-bottom: 1rem;
 }
 .registration .disclaimer{
     font-size: .8rem;
@@ -434,7 +441,10 @@ footer, footer a,footer p{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: var(--viewport-width);
+   width: var(--viewport-width);
+}
+footer{
+    padding-top: 3rem;
 }
 footer a:hover{
     border-radius: 1.75rem;
