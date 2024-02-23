@@ -26,6 +26,7 @@ const contactModal = document.getElementById("contactModal");
 // Get the button that opens the modal
 const signupBtn = document.getElementById("signupBtn");
 const contactBtn = document.getElementById("contactBtn");
+const contactBtnM = document.getElementById("contactBtnM");
 
 // Get the <span> element that closes the modal
 const signupSpan = document.getElementsByClassName("signupClose")[0];
@@ -34,12 +35,14 @@ const contactSpan = document.getElementsByClassName("contactClose")[0];
 // When the user clicks on the button, open the modal
 signupBtn.addEventListener('click', signupToggle);
 contactBtn.addEventListener('click', contactToggle);
+contactBtnM.addEventListener('click', contactToggle);
 
 function signupToggle (){
     signupModal.style.display = "block";
     signupBtn.style.zIndex = "0";
 }
 function contactToggle (){
+  // console.log('contact')
     contactModal.style.display = "block";
     contactBtn.style.zIndex = "0";
 }

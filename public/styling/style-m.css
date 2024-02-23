@@ -129,7 +129,7 @@ li {
 }
 
 /* INTRO */
-#intro, .mission,#about{
+#intro, .mission,#about,footer{
     padding: 3rem 2rem;
     display: flex;
     overflow: clip;
@@ -301,8 +301,9 @@ li {
     margin: 0 .45rem;
     font-size: 1rem;
 }
-#registerBtn{
+#registerBtn,#subscribeBtn{
     font-size: 1rem;
+    margin-top: 2rem;
 }
 .product{
     width: 100%;
@@ -422,11 +423,10 @@ body.registration{
     /* position: absolute;
     bottom: 0px; */
 }
-/* CONTACT */
 .contact-container>p{
     color: var(--khaki);
 }
-footer, footer a{
+footer, footer a,footer p{
     padding: 1rem;
     background: rgb(12, 49, 48);
     color: rgb(243, 204, 131);
@@ -439,9 +439,24 @@ footer, footer a{
 footer a:hover{
     border-radius: 1.75rem;
 }
-
-
-
+.socials{
+    display: flex;
+    align-items: flex-end;
+}
+.socials img{
+    width: 40px;
+    margin: 0 0 6px 0;
+}
+footer p{
+    margin:  0;
+    padding: 0;
+}
+footer p:first-child, .socials{
+    margin-bottom: 2rem;
+}
+.socials a,footer>a, .disclaimer{
+    font-size: .85rem;
+}
 @media (min-height: 800px) {
     .registration .frameContainer {
         margin-top: -40vh;
@@ -496,7 +511,7 @@ footer a:hover{
     }
 }
 @media (min-width: 500px) {
-    #intro, .mission, #about {
+    #intro, .mission, #about,footer {
         padding: 3rem;
     }
     h1{
@@ -566,7 +581,7 @@ footer a:hover{
         left: 0;
         margin: -15rem 0 -10rem 0;
     }
-    #intro, .mission, #about {
+    #intro, .mission, #about,footer {
         padding: 3rem 5rem;
     }
     .disclaimer{
@@ -575,10 +590,10 @@ footer a:hover{
 
   }
 @media (min-width: 900px) {
-    #intro  p, .mission p,#offerings p,#about p,h5{
+    #intro  p, .mission p,#offerings p,#about p, footer p,h5{
         font-size: 1.3rem;
     }
-    #intro, .mission, #about {
+    #intro, .mission, #about, footer {
         padding: 5rem 7rem;
     }
     #offerings{
@@ -639,14 +654,14 @@ footer a:hover{
     nav.horizontal a{
         font-size: 1.75rem;
     }
-    #intro  p, .mission p, #offerings p, #about p, h5 ,footer a{
+    #intro  p, .mission p, #offerings p, #about p, h5 ,footer a, footer p{
         font-size: 1.75rem;
     }
     h5 {
         margin: 0;
         padding: 0 8rem;
     }
-    #intro, .mission, #about{
+    #intro, .mission, #about, footer{
         padding: 5rem 10rem;
     }
     .photo{
@@ -675,7 +690,7 @@ footer a:hover{
     nav.horizontal a,h5 {
         font-size: 1.25rem;
     }
-    #intro  p, .mission p, #offerings p, #about p, h5, footer a{
+    #intro  p, .mission p, #offerings p, #about p, h5, footer a, footer p{
         font-size: 1rem;
     }
     .button-42{
@@ -691,7 +706,7 @@ footer a:hover{
     #intro, .mission, #about {
         padding: 3rem;
     }
-    #about {
+    #about{
         width: 60%;
         margin: auto;
         padding: 5rem 3rem;
@@ -722,7 +737,7 @@ footer a:hover{
     }
 }
 @media (min-height: 1300px){
-    #intro  p, .mission p, #offerings p, #about p, footer a{
+    #intro  p, .mission p, #offerings p, #about p, footer a,footer p{
         font-size: 1.25rem;
     }
     h5{
@@ -743,7 +758,7 @@ footer a:hover{
     #offerings .product {
         width: 62%;
     }
-    #about {
+    #about, footer p {
         width: 50%;
     }
     .disclaimer{
@@ -776,7 +791,7 @@ footer a:hover{
     #offerings .product {
         width: 50%;
     }
-    #about {
+    #about{
         width: 40%;
     }
     .mission .photo{
