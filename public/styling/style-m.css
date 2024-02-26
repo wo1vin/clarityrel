@@ -56,7 +56,7 @@ h5{
 a{
     font-family: 'Comfortaa', sans-serif;
     text-decoration: none;
-    color: var(--lilac);
+    color: gray;
     transition: all .2s;
 }
 
@@ -130,12 +130,18 @@ li {
 }
 
 /* INTRO */
-#intro, .mission,#about,footer{
+#intro, .mission,#about,footer,#success, #cancelled{
     padding: 3rem 2rem;
     display: flex;
     overflow: clip;
     flex-direction: column;
     align-items: flex-start;
+}
+#success, #cancelled{
+    align-items: center;
+}
+#success #logo,#success header, #cancelled header,#cancelled #logo{
+    padding: 0 0 2rem 0;
 }
 .photo{
     width: 125%;
@@ -178,7 +184,7 @@ li {
 .modal {
     /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -521,7 +527,7 @@ footer p:first-child, .socials{
     }
 }
 @media (min-width: 500px) {
-    #intro, .mission, #about,footer {
+    #intro, .mission, #about,footer,#success, #cancelled {
         padding: 3rem;
     }
     h1{
@@ -591,7 +597,7 @@ footer p:first-child, .socials{
         left: 0;
         margin: -15rem 0 -10rem 0;
     }
-    #intro, .mission, #about,footer {
+    #intro, .mission, #about,footer,#success, #cancelled {
         padding: 3rem 5rem;
     }
     .disclaimer{
@@ -603,7 +609,7 @@ footer p:first-child, .socials{
     #intro  p, .mission p,#offerings p,#about p, footer p,h5{
         font-size: 1.3rem;
     }
-    #intro, .mission, #about, footer {
+    #intro, .mission, #about, footer ,#success, #cancelled{
         padding: 5rem 7rem;
     }
     #offerings{
@@ -671,7 +677,7 @@ footer p:first-child, .socials{
         margin: 0;
         padding: 0 8rem;
     }
-    #intro, .mission, #about, footer{
+    #intro, .mission, #about, footer,#success, #cancelled{
         padding: 5rem 10rem;
     }
     .photo{
@@ -713,10 +719,10 @@ footer p:first-child, .socials{
         width: 45%;
         margin: 0;
     }
-    #intro, .mission, #about {
+    #intro, .mission, #about ,#success, #cancelled{
         padding: 3rem;
     }
-    #about{
+    #about,#success, #cancelled{
         width: 60%;
         margin: auto;
         padding: 5rem 3rem;
@@ -768,7 +774,7 @@ footer p:first-child, .socials{
     #offerings .product {
         width: 62%;
     }
-    #about, footer p {
+    #about, footer p,#success, #cancelled {
         width: 50%;
     }
     .disclaimer{
@@ -786,7 +792,7 @@ footer p:first-child, .socials{
     #offerings .product {
         width: 55%;
     }
-    #about {
+    #about,#success, #cancelled {
         width: 40%;
     }
 }
@@ -801,7 +807,7 @@ footer p:first-child, .socials{
     #offerings .product {
         width: 50%;
     }
-    #about{
+    #about,#success, #cancelled{
         width: 40%;
     }
     .mission .photo{
