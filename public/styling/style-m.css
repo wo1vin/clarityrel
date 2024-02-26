@@ -439,6 +439,9 @@ body.registration{
 .contact-container>p{
     color: var(--khaki);
 }
+.subscribeContainer{
+    text-align: center;
+}
 footer, footer a,footer p{
     padding: 1rem;
     background: rgb(12, 49, 48);
