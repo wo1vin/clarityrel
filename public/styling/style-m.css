@@ -144,12 +144,17 @@ li {
     padding: 0 0 2rem 0;
 }
 .photo{
-    width: 125%;
-    position: relative;
-    left: -12%;
-    top: 0;
+    width: 100%;
+    /* position: relative; */
+    /* left: -12%; */
+    /* top: 0; */
     z-index: -1;
     margin: -4rem 0;
+}
+.missionImg, .wed{
+    position: relative; 
+    left: -9%; 
+    top: 0;
 }
 .intro-img{
     /* margin: -4rem 0 0 0;
@@ -546,6 +551,9 @@ footer p:first-child, .socials{
     /* .intro-img{
         margin: -4rem 0 7rem 0;
     } */
+    .missionImg{
+        left: -37px;
+    }
     .product>p{
         width: 65%;
     }
@@ -592,8 +600,12 @@ footer p:first-child, .socials{
         padding: 1rem;
     }
     .photo{
-        width: 75%;
-        left: 12.5%;
+        position: relative;
+        /* width: 75%; */
+        /* left: 12.5%; */
+    }
+    .missionImg{
+        left: -8.5%;
     }
     .wed{
         width: 100%;
@@ -622,12 +634,15 @@ footer p:first-child, .socials{
         width: 85%;
         left: 8.5%;
     }
+    .missionImg{
+        left: 0%;
+    }
     .wed {
         width: 100%;
         left: 0;
     }
 }
-@media (min-height: 1100px) or (min-width: 1000px) {
+@media (min-width: 1000px) {
     #logo{
         padding-top: 1rem;
         width: 12rem;
