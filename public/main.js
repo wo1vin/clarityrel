@@ -27,6 +27,7 @@ const contactModal = document.getElementById("contactModal");
 const signupBtn = document.getElementById("signupBtn");
 const subscribeBtn = document.getElementById("subscribeBtn");
 const contactBtn = document.getElementById("contactBtn");
+const contactBtn2 = document.getElementById("contactBtn2");
 const contactBtnM = document.getElementById("contactBtnM");
 
 // Get the <span> element that closes the modal
@@ -37,6 +38,7 @@ const contactSpan = document.getElementsByClassName("contactClose")[0];
 signupBtn.addEventListener('click', signupToggle);
 subscribeBtn.addEventListener('click', signupToggle);
 contactBtn.addEventListener('click', contactToggle);
+contactBtn2.addEventListener('click', contactToggle);
 contactBtnM.addEventListener('click', contactToggle);
 
 function signupToggle (){
