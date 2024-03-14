@@ -9,8 +9,13 @@ It is currently deployed on Render.com under Clarity Relationships' account.
 The domain is managed through Clarity Relationships' Google Workspace.
 
 To edit this project:
--  Fork this repo
--  Add the ```.env``` file provided by Clarity Relatonships inside of the **config** file
--  Use the command ```npm install``` to install the dependencies
--  Update any info that may have changed since the last commit (Ex. Stripe Key, Domain)
--  Publish the changes
+-  Fork this repo or receive the files from Clarity Relationships.
+-  Create a ```.gitignore``` file and make sure that it has:
+    - node_modules
+    - .env
+-  Add the ```.env``` file provided by Clarity Relatonships to the **config** folder and integrate the environment variables to the pubishing site as you may need.
+-  Use the command ```npm install``` to install the dependencies.
+-  Update any info that may have changed since the last commit (Ex. Stripe Key, Domain).
+-  Commit and push the changes.
+-  Edit the Render account so that it is linked to the correct repo.
+-  Update the ```readme.md``` file to reflect the new context.
