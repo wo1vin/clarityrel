@@ -99,6 +99,7 @@ nav.horizontal{
 nav a {
     padding: 1rem 1.5rem;
     font-size: 1.8rem;
+    color: var(--lilac);
   }
   
   /* Style the hamburger menu */
